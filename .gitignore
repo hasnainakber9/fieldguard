@@ -1,0 +1,33 @@
+# Secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Data and outputs (survey data can contain PII: never commit it)
+data/
+outputs/
+fieldguard_output/
+*.parquet
+*.xlsx
+!tests/fixtures/*.xlsx
+.fieldguard_state/
+
+datasets/private/
+checkpoints/
+models/private/
+
+# Python tooling
+__pycache__/
+*.py[oc]
+.venv/
+.pytest_cache/
+.ruff_cache/
+.hypothesis/
+build/
+dist/
+*.egg-info/
+
+# PyCharm project settings (local data sources, run configurations)
+.idea/

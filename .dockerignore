@@ -1,0 +1,13 @@
+.venv
+.git
+__pycache__
+*.pyc
+.env
+.env.*
+!.env.example
+data
+outputs
+fieldguard_output
+.pytest_cache
+.ruff_cache
+.hypothesis

@@ -1,0 +1,135 @@
+# FieldGuard example project (KoboToolbox export of a household survey).
+# Copy this file next to your export, set data.path, and run:
+#   uv run python -m fieldguard run --config example_project.yaml
+# Relative paths resolve against this file's folder. Credentials never go in this file: they come from
+# environment variables (see .env.example). Unknown keys are rejected, so typos fail early.
+
+project:
+  name: Household survey pilot          # free text; the slug is derived from it
+  platform: kobo                         # auto | kobo | odk | surveycto | generic
+  timezone: Africa/Nairobi               # IANA name of the fieldwork timezone
+  naive_timestamps_timezone: Africa/Nairobi   # timezone for start/end without an offset (optional)
+  fieldwork:
+    start_date: 2026-03-02               # interviews dated before this are flagged
+    end_date: 2026-05-29                 # interviews dated after this are informational
+
+data:
+  path: raw/household_export.csv         # CSV, TSV, XLSX or Parquet; ';' or ',' are detected
+  # source:                              # optional remote source for `fieldguard fetch`
+  #   type: kobo
+  #   asset_uid: aXXXXXXXXXXXX           # the server URL and token come from KOBO_SERVER_URL / KOBO_TOKEN
+
+roles:
+  submission_id: _uuid                   # Kobo _uuid, ODK KEY, SurveyCTO KEY
+  respondent_id: hhid                    # household ID, unique per interview
+  enumerator_id: enum_id                 # who conducted the interview
+  cluster: village                       # sampling cluster (used for GPS radius and ICC adjustment)
+  start: start
+  end: end
+  survey_date: today
+  duration_unit: seconds                 # `duration` column unit, if the export has one
+  deviceid: deviceid
+  gps:
+    lat: _gps_latitude                   # split geopoint columns (Kobo style)
+    lon: _gps_longitude
+    accuracy: _gps_precision
+    # point: gps                         # or a single "lat lon alt accuracy" geopoint column
+
+variables:
+  key: [hh_size, monthly_income, food_exp, minutes_to_water, n_phones, age]   # enumerator effects and ICC
+  numeric: [age, hh_size, n_children, monthly_income, business_income, food_exp, minutes_to_water]
+  required:
+    - hhid
+    - enum_id
+    - consent
+    - {variable: age, severity: critical}
+    - {variable: business_income, when: "has_business == 'yes'", severity: warning}
+  special_codes:                         # defaults shown; add project codes if you use others
+    dont_know: [-99, "-99", dk]
+    refused: [-98, "-98", refused]
+    not_applicable: [-97, "-97"]
+  grids:
+    wellbeing:                           # Likert block; straight-lining and low variance are checked
+      columns: [wb_1, wb_2, wb_3, wb_4, wb_5, wb_6]
+      min_items: 4
+  constraints:
+    - {variable: age, min: 18, max: 100, soft_max: 85, severity: critical}
+    - {variable: hh_size, min: 1, max: 30, soft_max: 15}
+    - {id: children_le_size, expression: "n_children <= hh_size", message: "More children than household members"}
+  skip_logic:
+    - {id: business_skip, if: "has_business == 'no'", then_empty: [business_income]}
+    - {id: business_req, if: "${has_business} = 'yes'", then_required: [business_income]}
+    - {id: land_skip, if: "owns_land == 'no'", then_empty: [land_size]}
+  nonresponse: [monthly_income, business_income, land_size, minutes_to_water]
+  exclude: [consent_note]                # free-text notes that are not answers
+
+checks:                                  # per-check parameters; omit a check to use its defaults
+  outliers:
+    method: mad                          # mad | iqr
+    threshold: 3.5
+    log_transform: [monthly_income, business_income, food_exp]
+  benford:
+    variables: [monthly_income, business_income, food_exp]
+  heaping:
+    variables: [age, monthly_income, food_exp, minutes_to_water]
+  gps:
+    cluster_radius_m: 2500               # points farther than this from the cluster centre are flagged
+    max_accuracy_m: 50
+    min_distance_m: 10                   # same-spot threshold within one enumerator's interviews
+  duration:
+    short_ratio: 0.5                     # shorter than half the form median
+    min_minutes: 5
+  timestamps:
+    working_hours: [6, 21]
+    max_per_day: 8
+  near_duplicates:
+    threshold: 0.95
+    min_compared: 10
+
+scoring:
+  flag_threshold: 30                     # risk score (0-100) at which an enumerator is flagged
+  anomaly_method: isolation_forest       # isolation_forest | lof | none (single job, reproducible seed)
+  anomaly_weight: 0.25
+  min_enumerators_for_anomaly: 6
+  rule_overrides:                        # tune a rule without redefining all of them
+    short_duration_share: {hi: 0.45}
+
+backcheck:
+  backchecker_column: bc_id              # optional: who did the re-interview
+  sample_rate: 0.10                      # share of interviews; DIME Wiki suggests 10-20% of the sample
+  min_per_enumerator: 2                  # every enumerator is back-checked (DIME Wiki: every enumerator)
+  random_share: 0.5                      # half the sample is random, half is risk-weighted
+  risk_oversample: 1.0                   # interviews by flagged enumerators are oversampled
+  type1_threshold: 0.10                  # error-rate thresholds for each variable type (configurable)
+  type2_threshold: 0.10
+  type3_threshold: 0.10
+  contact_columns: [resp_phone]          # only in the field-team sample file, never in shared reports
+  variables:
+    - {name: hh_size, type: 1, kind: numeric}
+    - {name: water_source, type: 1, kind: categorical}
+    - {name: owns_land, type: 1, kind: categorical}
+    - {name: n_children, type: 2, kind: numeric}
+    - {name: minutes_to_water, type: 2, kind: numeric, rel_tolerance: 0.5}
+    - {name: monthly_income, type: 3, kind: numeric, rel_tolerance: 0.25}
+
+privacy:
+  pii_columns: [resp_name, resp_phone]   # never quoted in shared outputs
+  redact_pii_in_reports: true
+  gps_decimals_in_reports: 3             # about 110 m; raw coordinates stay in the data folder
+  hash_respondent_ids: false             # true: salted pseudonyms (set FIELDGUARD_HASH_SALT)
+  pseudonymize_enumerators: false
+
+outputs:
+  dir: "outputs/{project}/{run_id}"      # overridden by FIELDGUARD_REPORTS_DIR or --out
+  formats: [csv, parquet, excel, html]
+  max_rows_per_sheet: 100000
+  max_issues_per_check_html: 200
+
+sink:
+  postgres: false                        # true: write to PostgreSQL when FIELDGUARD_DATABASE_URL is reachable
+  schema_name: fieldguard
+
+incremental:
+  enabled: false                         # the daily job can also pass --incremental
+  state: auto                            # auto | file | postgres
+  state_dir: .fieldguard_state

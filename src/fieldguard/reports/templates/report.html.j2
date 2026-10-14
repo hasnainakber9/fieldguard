@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="FieldGuard {{ version }}">
+<title>FieldGuard report: {{ project }}</title>
+<style>
+  :root {
+    --bg: #f7f7f5; --fg: #1d1d1b; --muted: #5f6368; --card: #ffffff; --line: #d9d9d4;
+    --accent: #2f5d8a; --track: #ececE6;
+    --sev-critical: #b3261e; --sev-warning: #c77700; --sev-info: #7a8799;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #161816; --fg: #e8e8e4; --muted: #a3a79f; --card: #1f221f; --line: #3a3f3a;
+      --accent: #7fb0e0; --track: #2c302c;
+      --sev-critical: #ff8a80; --sev-warning: #ffb74d; --sev-info: #9aa5b5;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #161816; --fg: #e8e8e4; --muted: #a3a79f; --card: #1f221f; --line: #3a3f3a;
+    --accent: #7fb0e0; --track: #2c302c;
+    --sev-critical: #ff8a80; --sev-warning: #ffb74d; --sev-info: #9aa5b5;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; padding: 24px 16px 48px; background: var(--bg); color: var(--fg);
+         font: 15px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  main { max-width: 1100px; margin: 0 auto; }
+  h1 { font-size: 1.6rem; margin: 0 0 4px; }
+  h2 { font-size: 1.2rem; margin: 28px 0 10px; border-bottom: 1px solid var(--line); padding-bottom: 4px; }
+  h3 { font-size: 1rem; margin: 18px 0 6px; }
+  .muted { color: var(--muted); }
+  .banner { border: 2px solid var(--sev-critical); color: var(--fg); padding: 10px 14px; border-radius: 8px; margin: 12px 0; background: var(--card); }
+  .banner strong { color: var(--sev-critical); }
+  .note { background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: 10px 14px; margin: 12px 0; }
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 10px; margin: 14px 0; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; }
+  .card .k { font-size: 0.8rem; color: var(--muted); text-transform: uppercase; letter-spacing: .03em; }
+  .card .v { font-size: 1.5rem; font-weight: 600; }
+  .wrap { overflow-x: auto; background: var(--card); border: 1px solid var(--line); border-radius: 8px; }
+  table { border-collapse: collapse; width: 100%; font-size: 0.9rem; }
+  th, td { text-align: left; padding: 6px 8px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { font-weight: 600; background: var(--track); position: sticky; top: 0; }
+  td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+  .sev { font-weight: 600; }
+  .sev-critical { color: var(--sev-critical); }
+  .sev-warning { color: var(--sev-warning); }
+  .sev-info { color: var(--sev-info); }
+  svg.chart { width: 100%; height: auto; display: block; }
+  svg .axis { font-size: 12px; fill: var(--fg); }
+  svg .value { font-size: 12px; fill: var(--muted); font-variant-numeric: tabular-nums; }
+  svg .track { fill: var(--track); }
+  svg.spark { width: 100%; max-width: 320px; height: 48px; }
+  details { margin: 8px 0; }
+  summary { cursor: pointer; font-weight: 600; padding: 4px 0; }
+  code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 0.85em; }
+  footer { margin-top: 36px; color: var(--muted); font-size: 0.85rem; }
+</style>
+</head>
+<body>
+<main>
+  <h1>FieldGuard data-quality report</h1>
+  <div class="muted">Project <strong>{{ project }}</strong> &middot; run <code>{{ run_id }}</code> &middot; {{ mode }} mode &middot; generated {{ finished_at }}</div>
+
+  {% if synthetic %}
+  <div class="banner"><strong>SYNTHETIC DATA.</strong> {{ synthetic_label }} Nothing in this report describes a real survey, team or enumerator.</div>
+  {% endif %}
+
+  <div class="note"><strong>Read this first.</strong> Every flag is a <em>lead for supervisory review</em>, not proof of misconduct. Flags must not trigger automated sanctions, pay deductions or dismissals. Confirm high-risk leads with back-checks, call-backs or a conversation with the enumerator before any decision. Names, phone numbers and precise GPS are redacted in this report.</div>
+
+  <div class="cards">
+    <div class="card"><div class="k">Records</div><div class="v">{{ n_records }}</div><div class="muted">{{ n_new_records }} new in this run</div></div>
+    <div class="card"><div class="k">Enumerators</div><div class="v">{{ n_enumerators }}</div></div>
+    <div class="card"><div class="k">Issues</div><div class="v">{{ n_issues }}</div><div class="muted">{{ sev.critical }} critical &middot; {{ sev.warning }} warning &middot; {{ sev.info }} info</div></div>
+    <div class="card"><div class="k">Flagged enumerators</div><div class="v">{{ n_flagged }}</div><div class="muted">risk score &ge; {{ flag_threshold }}</div></div>
+    <div class="card"><div class="k">Platform</div><div class="v" style="font-size:1.1rem">{{ platform }}</div><div class="muted">source: {{ data_source }}</div></div>
+  </div>
+
+  <h2>Enumerator risk scores</h2>
+  <p class="muted">Risk combines transparent rule points (0-100) with an unsupervised anomaly score across enumerators. Use it to prioritise supervision and back-checks, not to rank people for sanctions.</p>
+  <div class="wrap" style="padding:12px">{{ risk_chart | safe }}</div>
+  <div class="wrap" style="margin-top:10px">
+    <table>
+      <thead><tr><th>Enumerator</th><th class="num">Interviews</th><th class="num">Risk</th><th class="num">Rules</th><th class="num">Anomaly</th><th>Flagged</th><th>Main signals</th></tr></thead>
+      <tbody>
+      {% for r in scorecard %}
+        <tr>
+          <td>{{ r.enumerator }}</td>
+          <td class="num">{{ r.n_interviews }}</td>
+          <td class="num">{{ "%.1f" | format(r.risk_score) }}</td>
+          <td class="num">{{ "%.1f" | format(r.rule_score) }}</td>
+          <td class="num">{{ r.anomaly_text }}</td>
+          <td>{{ "yes" if r.flagged else "" }}</td>
+          <td>{{ r.top_reasons }}</td>
+        </tr>
+      {% else %}
+        <tr><td colspan="7" class="muted">No enumerator scores (enumerator role not configured, or too few interviews).</td></tr>
+      {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Issues by check</h2>
+  <div class="wrap" style="padding:12px">{{ issue_chart | safe }}</div>
+
+  <h2>Check status</h2>
+  <div class="wrap">
+    <table>
+      <thead><tr><th>Check</th><th>Status</th><th class="num">Issues</th><th class="num">Seconds</th><th>Message</th></tr></thead>
+      <tbody>
+      {% for c in check_status %}
+        <tr><td><code>{{ c.check_id }}</code></td><td>{{ c.status }}</td><td class="num">{{ c.n_issues }}</td><td class="num">{{ c.seconds }}</td><td>{{ c.message }}</td></tr>
+      {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Issues (first {{ max_per_check }} per check)</h2>
+  {% for block in blocks %}
+    <details {% if loop.index <= 3 %}open{% endif %}>
+      <summary><code>{{ block.check_id }}</code> &middot; {{ block.title }} &middot; {{ block.total }} issue(s)</summary>
+      <p class="muted">{{ block.description }}</p>
+      {% if block.references %}<p class="muted">References: {{ block.references }}</p>{% endif %}
+      {% if block.rows %}
+      <div class="wrap">
+        <table>
+          <thead><tr><th>Severity</th><th>Enumerator</th><th>Record</th><th>Variable</th><th>Message</th></tr></thead>
+          <tbody>
+          {% for r in block.rows %}
+            <tr><td class="sev sev-{{ r.severity }}">{{ r.severity }}</td><td>{{ r.enumerator }}</td><td><code>{{ r.record_id }}</code></td><td>{{ r.variable }}</td><td>{{ r.message }}</td></tr>
+          {% endfor %}
+          </tbody>
+        </table>
+      </div>
+      {% if block.total > block.rows|length %}<p class="muted">Showing {{ block.rows|length }} of {{ block.total }}. Full list in the issues CSV or workbook.</p>{% endif %}
+      {% endif %}
+    </details>
+  {% else %}
+    <p class="muted">No issues were recorded.</p>
+  {% endfor %}
+
+  <h2>Method and limitations</h2>
+  <div class="note">
+    <p>Checks are implemented as described in the README catalogue. Thresholds are defaults or configured values, not validated cut-offs for your survey.
+    A check that finds nothing does not show that the data are clean, and a flag does not show that a record is false. Benford, digit-preference and
+    straight-lining signals can arise from honest behaviour (for example, rounding by respondents or forms with few answer options).</p>
+    <p class="muted">FieldGuard {{ version }}. Configuration hash: <code>{{ config_hash }}</code>.</p>
+  </div>
+
+  <footer>Generated by FieldGuard. Open-source under the Apache License 2.0.</footer>
+</main>
+</body>
+</html>
