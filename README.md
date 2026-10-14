@@ -303,7 +303,7 @@ digit-heaped, short or GPS-clustered interviews, among other patterns), runs the
 against the answer key. It covers contamination rates of 5%, 10%, 20% and 30% of 30 enumerators, with three
 seeds each, and writes per-run and summary tables and a JSON file under the output folder.
 
-Results from the run recorded in this release (`C:/ComputationalLab/reports/fieldguard/benchmark/`; synthetic; 30
+Results from the run recorded in this release (`D:/ComputationalLab/reports/fieldguard/benchmark/`; synthetic; 30
 enumerators and about 25 interviews each; 3 seeds per rate; mean over seeds, with the standard deviation in brackets
 where it is not zero):
 

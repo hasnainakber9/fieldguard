@@ -94,7 +94,7 @@ checked.
 
 | Location | Content | Shared? |
 |---|---|---|
-| `C:/ComputationalLab/reports/fieldguard/demo/` | Issues, scorecard, metrics, check status, workbook, HTML report, run summary, configuration and back-check summaries from the demo (all `synthetic_`) | Yes. Contains no raw survey rows, no answer keys and no field-only sample. |
-| `C:/ComputationalLab/reports/fieldguard/benchmark/` | Benchmark runs, summary and JSON (`synthetic_`) | Yes |
+| `D:/ComputationalLab/reports/fieldguard/demo/` | Issues, scorecard, metrics, check status, workbook, HTML report, run summary, configuration and back-check summaries from the demo (all `synthetic_`) | Yes. Contains no raw survey rows, no answer keys and no field-only sample. |
+| `D:/ComputationalLab/reports/fieldguard/benchmark/` | Benchmark runs, summary and JSON (`synthetic_`) | Yes |
 | `D:/ComputationalLab/data/fieldguard/demo/` | Raw synthetic survey, answer keys (enumerator and record level), re-interviews, the field-only back-check sample (`*_FIELD_ONLY.csv`, which contains contact columns) and a full copy of the demo outputs | No. Field and data use only. |
 | `D:/ComputationalLab/data/fieldguard/run_check*/` | Outputs of test runs of `fieldguard run` on the synthetic demo data (file-state incremental runs and the unreachable-sink check) | No |
