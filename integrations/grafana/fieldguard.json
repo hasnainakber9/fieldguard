@@ -3,7 +3,7 @@
     {
       "name": "DS_POSTGRES",
       "label": "FieldGuard PostgreSQL",
-      "description": "Postgres datasource holding the fieldguard schema (provisioned by the coordinator)",
+      "description": "Postgres datasource holding the fieldguard schema (created by the FieldGuard PostgreSQL sink)",
       "type": "datasource",
       "pluginId": "grafana-postgresql-datasource",
       "pluginName": "PostgreSQL"

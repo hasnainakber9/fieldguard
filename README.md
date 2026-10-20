@@ -30,6 +30,7 @@ Status: alpha (v0.1.0). Licence: Apache-2.0 (see `LICENSE` and `NOTICE`).
 - [Connectors](#connectors)
 - [Privacy and ethics](#privacy-and-ethics)
 - [Benchmark on synthetic data](#benchmark-on-synthetic-data)
+- [Verification status](#verification-status)
 - [Limitations](#limitations)
 - [References](#references)
 - [Development](#development)
@@ -252,9 +253,9 @@ with a warning and the other formats are still written.
   submissions not seen before are reported, and the seen IDs are kept in the database when it is reachable
   (`incremental.state: auto`) or in `.fieldguard_state/` otherwise.
 
-Tested in this session: the file-state incremental path (a second run on the same data reported 0 new records)
-and the skip behaviour with an unreachable database. The live PostgreSQL round trip was **not** run (no
-database was available), so it is verified only by code review and a skipped test.
+The live round trip was run against a throwaway PostgreSQL 17 container (see [Verification status](#verification-status)).
+To run the live tests yourself, point `FIELDGUARD_DATABASE_URL` at a disposable database and run
+`uv run pytest -m postgres`; the incremental test creates and drops its own schema.
 
 ## Grafana dashboard
 
@@ -262,8 +263,10 @@ database was available), so it is verified only by code review and a skipped tes
 datasource variable (`DS_POSTGRES`), a `project` variable and an `include_synthetic` switch. Panels show flagged
 enumerators, critical issues, records and enumerators in the latest run, issues by severity over runs, flagged
 enumerators over runs, the enumerator risk table, issues by check and the run list. Every table and
-alias-qualified column in the panel SQL was checked against the DDL in `sink/postgres.py`. The dashboard has **not**
-been loaded in a running Grafana instance in this session. Provisioning the datasource is left to the coordinator.
+alias-qualified column in the panel SQL was checked against the DDL in `sink/postgres.py`. The dashboard was
+imported into a throwaway Grafana 13.2 container through the import API, and every panel query and the `project`
+variable query ran without error against a database written by the sink (see [Verification status](#verification-status)).
+Provisioning the datasource in your own Grafana is up to you: import the JSON and pick the datasource when asked.
 
 ## Connectors
 
@@ -277,8 +280,10 @@ variables are listed in `.env.example`.
 | SurveyCTO server API | `SURVEYCTO_SERVER` (server name only), `SURVEYCTO_FORM_ID`, `SURVEYCTO_USERNAME`, `SURVEYCTO_PASSWORD` | `--since` limits the pull by date. |
 
 `fieldguard fetch --config project.yaml --out raw/export.csv` downloads submissions into a CSV that `run` can read.
-Downloads are paged and resumable through a page cache. All three connectors are tested with mocked HTTP only.
-No account was created and no live server was contacted while building this release.
+Downloads are paged and resumable through a page cache. **All three connectors are untested against live
+servers.** They are tested with mocked HTTP responses written from the platforms' API documentation only; no
+account was created and no live server was contacted while building this release. Please report any mismatch
+with a real server as an issue.
 
 ## Privacy and ethics
 
@@ -322,58 +327,98 @@ patterns to 60% to 100% of their interviews, so the signal is strong by design. 
 from that design and should not be read as performance on real surveys, where fabrication is subtler and the
 answer key is uncertain. The benchmark is a regression test for the pipeline, not a validation study.
 
+## Verification status
+
+What was exercised for v0.1.0 (October 2026), beyond the unit tests (all on synthetic data):
+
+**Verified**
+
+* Test suite: `uv run pytest` passes locally, including the live PostgreSQL tests below; CI runs lint and tests on
+  every push and pull request (`.github/workflows/ci.yml`).
+* PostgreSQL sink: a throwaway `postgres:17` container. The live tests (`-m postgres`) passed, and two
+  `fieldguard run --incremental` calls on the synthetic demo wrote 2 runs, 78 issues, 20 scorecard rows and 95 seen
+  records; the second run correctly reported 0 new records. This found and fixed a bug: the first incremental run
+  against an empty database failed because `seen_records` did not exist yet.
+* Grafana dashboard: imported into a throwaway `grafana/grafana` 13.2 container with a PostgreSQL datasource on that
+  database; all ten panel queries and the `project` variable returned data without errors.
+* Docker image: built from the `Dockerfile` (python:3.12-slim, about 900 MB with all extras); `--help`, `version`
+  and the synthetic `demo` (with the back-check round trip) ran inside the container. The image runs as root.
+
+**Not verified**
+
+* The KoboToolbox, ODK Central and SurveyCTO connectors against live servers (mocked HTTP only; no accounts used).
+* Any threshold, ramp or weight on real survey data (see below).
+* The Grafana dashboard visually, in a browser, and with a datasource provisioned from files rather than the import API.
+
 ## Limitations
 
-* **No real data validation.** No real survey export was available. No threshold has been calibrated on real
-  fieldwork, and the rule weights are judgement.
+* **Thresholds are untested on real data.** No real survey export was available, and no public survey dataset
+  with documented fabrication and a clear reuse licence was found. Every default threshold, the scoring ramps and
+  weights, and `flag_threshold` are judgement informed by the literature, checked only on the synthetic generator.
+  Calibrate them before relying on the flags:
+  1. Run FieldGuard on a past round of your own survey for which back-check or supervision outcomes are known
+     (or on the first weeks of fieldwork) without acting on the flags.
+  2. Compare the scorecard with those outcomes: how many flagged enumerators were confirmed, and how many
+     confirmed problems were missed.
+  3. Adjust `checks.<id>` thresholds, `scoring.rule_overrides` and `scoring.flag_threshold` so the review queue is
+     a size your supervisors can follow up, and record the values you chose in the project file.
+  4. Re-check after changes to the form, the team or the sample, since checks such as Benford, heaping and the
+     enumerator-effect ICC depend on the questionnaire and the population.
 * **Synthetic results are optimistic.** See the benchmark section.
 * **Small samples.** Enumerator-level statistics (Benford, heaping, ICC, Isolation Forest) are unstable with few
   interviews or enumerators. Check `min_n` and `min_enumerators_for_anomaly` for your design.
 * **Platform coverage.** Export conventions are handled for the column names described in the inputs section.
   Unusual form designs (repeat groups, custom naming) may need `roles` and `variables` settings.
-* **Not tested here:** the live PostgreSQL round trip, the Grafana dashboard in a running Grafana, the Docker
-  image (Docker was off), and live calls to the three platform APIs.
+* **Not tested here:** live calls to the three platform APIs (see [Verification status](#verification-status)).
 
 ## References
 
-Sources marked (checked) were confirmed in this session against the publisher, repository or a citing paper. The
-others are the citations used in the code and should be verified before you cite them in a publication.
+Each entry was checked in October 2026 against the publisher, Crossref or the organisation's own page (title,
+authors, year, venue, DOI where one exists).
 
-* J-PAL, *Data quality checks* (checked): https://www.povertyactionlab.org/resource/data-quality-checks
-* IPA, *ipacheck* high-frequency checks template, Stata (checked): https://github.com/PovertyAction/high-frequency-checks
-* IPA Knowledge Hub, *High Frequency Checks* (checked): https://data.poverty-action.org/data-quality/high-frequency-checks.html
-* DIME Analytics, *High Frequency Checks*, DIME Wiki (checked): https://dimewiki.worldbank.org/High_Frequency_Checks
-* DIME Analytics, *Back Checks* and *Monitoring Data Quality*, DIME Wiki (checked for the 10-20% guidance):
+* J-PAL, *Data quality checks*: https://www.povertyactionlab.org/resource/data-quality-checks
+* IPA, *ipacheck* high-frequency checks template, Stata: https://github.com/PovertyAction/high-frequency-checks
+* IPA Knowledge Hub, *High Frequency Checks*: https://data.poverty-action.org/data-quality/high-frequency-checks.html
+* DIME Analytics, *High Frequency Checks*, DIME Wiki: https://dimewiki.worldbank.org/High_Frequency_Checks
+* DIME Analytics, *Back Checks* and *Monitoring Data Quality*, DIME Wiki (source of the 10-20% guidance):
   https://dimewiki.worldbank.org/Back_Checks
-* Nigrini, M. J. (2012). *Benford's Law: Applications for Forensic Accounting, Auditing, and Fraud Detection*. Wiley.
-* Judge, G., and Schechter, L. (2009). Detecting problems in survey data using Benford's law. *Journal of Human Resources*.
-* Schräpler, J.-P. (2011). Benford's law as an instrument for fraud detection in surveys using the data of the
-  Socio-Economic Panel (SOEP).
-* Schäfer, C., Schräpler, J.-P., Müller, K.-R., and Wagner, G. G. (2005). Automatic identification of faked and
-  fraudulent interviews in the German SOEP. *Schmollers Jahrbuch* (checked).
-* Bredl, S., Winker, P., and Kötschau, K. (2012). A statistical approach to detect interviewer falsification of
-  survey data. *Survey Methodology*, 38(1) (checked).
-* Kuriakose, N., and Robbins, M. (2016). Don't get duped: Fraud through duplication in public opinion surveys.
-  *Statistical Journal of the IAOS* (existence checked through a citing paper).
-* Simmons et al. (2016). Evaluating a new proposal for detecting data falsification in surveys. *Statistical
-  Journal of the IAOS* (title and journal checked; author list not checked).
-* Blasius, J., and Thiessen, V. (2015). Should we trust survey data? Assessing response simplification and data
-  fabrication. *Social Science Research*.
-* Kemper, C. J., and Menold, N. (2014). Nuisance or remedy? The utility of stylistic responding as an indicator of
-  data fabrication in surveys. *Methodology*.
-* West, B. T., and Blom, A. G. (2017). Explaining interviewer effects: a research synthesis. *Journal of Survey
-  Statistics and Methodology*.
-* Iglewicz, B., and Hoaglin, D. (1993). *How to Detect and Handle Outliers*. ASQC Quality Press.
-* Murphy, J., et al. (2004). A system for detecting interviewer falsification. AAPOR proceedings.
 * AAPOR (2003). *Interviewer Falsification in Survey Research: Current Best Methods for Prevention, Detection and
-  Repair of Its Effects*.
-* Shryock, H., and Siegel, J. (*Methods and Materials of Demography*), for Whipple's index.
+  Repair of Its Effects*. American Association for Public Opinion Research.
+* Blasius, J., and Thiessen, V. (2015). Should we trust survey data? Assessing response simplification and data
+  fabrication. *Social Science Research*, 52, 479-493. https://doi.org/10.1016/j.ssresearch.2015.03.006
+* Bredl, S., Winker, P., and Kötschau, K. (2012). A statistical approach to detect interviewer falsification of
+  survey data. *Survey Methodology*, 38(1), 1-10 (Statistics Canada, catalogue 12-001-X).
+* Iglewicz, B., and Hoaglin, D. C. (1993). *How to Detect and Handle Outliers* (ASQC Basic References in Quality
+  Control, Vol. 16). ASQC Quality Press.
+* Judge, G., and Schechter, L. (2009). Detecting problems in survey data using Benford's law. *Journal of Human
+  Resources*, 44(1), 1-24. https://doi.org/10.1353/jhr.2009.0010
+* Kemper, C. J., and Menold, N. (2014). Nuisance or remedy? The utility of stylistic responding as an indicator of
+  data fabrication in surveys. *Methodology*, 10(3), 92-99. https://doi.org/10.1027/1614-2241/a000078
+* Kuriakose, N., and Robbins, M. (2016). Don't get duped: Fraud through duplication in public opinion surveys.
+  *Statistical Journal of the IAOS*, 32(3), 283-291. https://doi.org/10.3233/SJI-160978
+* Murphy, J., Baxter, R., Eyerman, J., Cunningham, D., and Kennet, J. (2004). A system for detecting interviewer
+  falsification. Paper presented at the 59th Annual Conference of the American Association for Public Opinion
+  Research (RTI International).
+* Nigrini, M. J. (2012). *Benford's Law: Applications for Forensic Accounting, Auditing, and Fraud Detection*.
+  Wiley. https://doi.org/10.1002/9781119203094
+* Schäfer, C., Schräpler, J.-P., Müller, K.-R., and Wagner, G. G. (2005). Automatic identification of faked and
+  fraudulent interviews in the German SOEP. *Schmollers Jahrbuch*, 125(1), 183-193.
+  https://doi.org/10.3790/schm.125.1.183
+* Schräpler, J.-P. (2011). Benford's law as an instrument for fraud detection in surveys using the data of the
+  Socio-Economic Panel (SOEP). *Jahrbücher für Nationalökonomie und Statistik*, 231(5-6), 685-718.
+  https://doi.org/10.1515/jbnst-2011-5-609
+* Shryock, H. S., Siegel, J. S., and associates (1973). *The Methods and Materials of Demography*. U.S. Bureau of
+  the Census (source of Whipple's index as used here).
+* Simmons, K., Mercer, A., Schwarzer, S., and Kennedy, C. (2016). Evaluating a new proposal for detecting data
+  falsification in surveys. *Statistical Journal of the IAOS*, 32(3), 327-338. https://doi.org/10.3233/SJI-161019
+* West, B. T., and Blom, A. G. (2017). Explaining interviewer effects: A research synthesis. *Journal of Survey
+  Statistics and Methodology*, 5(2), 175-211. https://doi.org/10.1093/jssam/smw024
 
 ## Development
 
 ```bash
 uv sync
-uv run pytest -q                    # the live Postgres test skips unless FIELDGUARD_DATABASE_URL points at a reachable server
+uv run pytest -q                    # the live Postgres tests skip unless FIELDGUARD_DATABASE_URL points at a reachable server
 uv run ruff check --fix .
 uv run ruff format .
 ```
