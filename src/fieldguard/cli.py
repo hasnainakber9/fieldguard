@@ -17,6 +17,7 @@ from fieldguard import __version__
 
 app = typer.Typer(
     add_completion=False,
+    pretty_exceptions_show_locals=False,  # locals can hold the database URL with its password
     no_args_is_help=True,
     help="FieldGuard: survey quality checks and fabrication detection for KoboToolbox, ODK and SurveyCTO exports. "
     "Flags are leads for supervisory review, not proof of misconduct.",

@@ -46,7 +46,8 @@ def redact_url(url: str) -> str:
         return "<unparseable database URL>"
 
 
-def _schema(cfg: FieldGuardConfig) -> str:
+def validated_schema(cfg: FieldGuardConfig) -> str:
+    """``sink.schema_name``, checked to be a plain lower-case identifier before it is put into SQL."""
     name = cfg.sink.schema_name
     if not _SCHEMA.match(name):
         raise ValueError(f"sink.schema_name {name!r} must be a lower-case SQL identifier")
@@ -111,7 +112,7 @@ def write_run(result: RunResult, cfg: FieldGuardConfig, url: str, salt: str | No
     """Insert one run with its issues and scorecard. Returns row counts. Assumes the database is reachable."""
     from sqlalchemy import create_engine, text
 
-    schema = _schema(cfg)
+    schema = validated_schema(cfg)
     issues = redact_issues(result.issues, cfg, salt)
     card = redact_scorecard(result.scorecard, cfg, salt) if not result.scorecard.empty else result.scorecard
     engine = create_engine(url)

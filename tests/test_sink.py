@@ -83,3 +83,70 @@ def test_live_postgres_round_trip(small_synthetic):  # pragma: no cover - needs 
     result = run_checks(survey.data, cfg, run_id="pytest-live")
     counts = write_run(result, cfg, url)
     assert counts["runs"] == 1
+
+
+@pytest.mark.parametrize("bad", ["Fieldguard", "fg; drop table x", "1abc", "a-b"])
+def test_state_functions_reject_unsafe_schema_names_before_connecting(bad):
+    from fieldguard.sink import load_seen_postgres, save_seen_postgres
+
+    cfg = config_from_dict({"sink": {"schema_name": bad}})
+    with pytest.raises(ValueError, match="schema_name"):
+        load_seen_postgres(CLOSED_URL, cfg)
+    with pytest.raises(ValueError, match="schema_name"):
+        save_seen_postgres(CLOSED_URL, cfg, ["a"], run_id="fg-1")
+
+
+def _live_url() -> str:
+    url = os.environ["FIELDGUARD_DATABASE_URL"]
+    status = check_reachable(url)
+    if not status.available:
+        pytest.skip(status.message)
+    return url
+
+
+@pytest.mark.postgres
+@pytest.mark.skipif(not os.environ.get("FIELDGUARD_DATABASE_URL"), reason="FIELDGUARD_DATABASE_URL not set")
+def test_live_postgres_incremental_state_on_a_fresh_schema(small_synthetic):  # pragma: no cover - needs a database
+    """First incremental run against a database the sink has never written to (regression: the seen_records
+    lookup used to fail with UndefinedTable before the first write)."""
+    import uuid
+
+    from sqlalchemy import create_engine, text
+
+    from fieldguard.pipeline import run_checks
+    from fieldguard.sink import load_seen_postgres, save_seen_postgres, write_run
+    from fieldguard.synthetic import synthetic_config
+
+    url = _live_url()
+    schema = f"fg_test_{uuid.uuid4().hex[:12]}"
+    survey, spec = small_synthetic
+    raw = synthetic_config(spec=spec)
+    raw["sink"] = {**raw.get("sink", {}), "schema_name": schema}
+    cfg = config_from_dict(raw)
+    engine = create_engine(url)
+    try:
+        assert load_seen_postgres(url, cfg) == set()
+        first = run_checks(survey.data, cfg, seen_ids=set(), run_id="pytest-inc-1")
+        counts = write_run(first, cfg, url)
+        ids = [str(x) for x in first.context.record_id]
+        assert save_seen_postgres(url, cfg, ids, first.run_id) == len(set(ids))
+        assert load_seen_postgres(url, cfg) == set(ids)
+
+        second = run_checks(survey.data, cfg, seen_ids=load_seen_postgres(url, cfg), run_id="pytest-inc-2")
+        assert second.n_new_records == 0
+        write_run(second, cfg, url)
+        with engine.connect() as conn:
+            n_runs = conn.execute(text(f"SELECT count(*) FROM {schema}.runs")).scalar()
+            n_issues = conn.execute(
+                text(f"SELECT count(*) FROM {schema}.issues WHERE run_id = 'pytest-inc-1'")
+            ).scalar()
+            n_cards = conn.execute(
+                text(f"SELECT count(*) FROM {schema}.scorecards WHERE run_id = 'pytest-inc-1'")
+            ).scalar()
+        assert n_runs == 2
+        assert n_issues == counts["issues"]
+        assert n_cards == counts["scorecards"] == len(first.scorecard)
+    finally:
+        with engine.begin() as conn:
+            conn.execute(text(f"DROP SCHEMA IF EXISTS {schema} CASCADE"))
+        engine.dispose()

@@ -14,6 +14,7 @@ from collections.abc import Iterable
 from pathlib import Path
 
 from fieldguard.config import FieldGuardConfig
+from fieldguard.sink.postgres import validated_schema
 
 _SAFE = re.compile(r"[^A-Za-z0-9_.-]+")
 
@@ -43,12 +44,17 @@ def save_seen_file(cfg: FieldGuardConfig, record_ids: Iterable[str], run_id: str
 
 
 def load_seen_postgres(url: str, cfg: FieldGuardConfig) -> set[str]:
+    """Seen submission IDs for this project. A database the sink has not written to yet has no
+    ``seen_records`` table; that means nothing was seen, so the first incremental run reports every record."""
     from sqlalchemy import create_engine, text
 
-    schema = cfg.sink.schema_name
+    schema = validated_schema(cfg)
     engine = create_engine(url)
     try:
         with engine.connect() as conn:
+            exists = conn.execute(text("SELECT to_regclass(:t)"), {"t": f"{schema}.seen_records"}).scalar()
+            if exists is None:
+                return set()
             rows = conn.execute(
                 text(f"SELECT record_id FROM {schema}.seen_records WHERE project = :p"), {"p": cfg.project.slug}
             )
@@ -60,7 +66,7 @@ def load_seen_postgres(url: str, cfg: FieldGuardConfig) -> set[str]:
 def save_seen_postgres(url: str, cfg: FieldGuardConfig, record_ids: Iterable[str], run_id: str) -> int:
     from sqlalchemy import create_engine, text
 
-    schema = cfg.sink.schema_name
+    schema = validated_schema(cfg)
     rows = [{"p": cfg.project.slug, "r": str(x), "run": run_id} for x in sorted({str(x) for x in record_ids})]
     if not rows:
         return 0
