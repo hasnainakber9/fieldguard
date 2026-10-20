@@ -342,7 +342,9 @@ What was exercised for v0.1.0 (October 2026), beyond the unit tests (all on synt
 * Grafana dashboard: imported into a throwaway `grafana/grafana` 13.2 container with a PostgreSQL datasource on that
   database; all ten panel queries and the `project` variable returned data without errors.
 * Docker image: built from the `Dockerfile` (python:3.12-slim, about 900 MB with all extras); `--help`, `version`
-  and the synthetic `demo` (with the back-check round trip) ran inside the container. The image runs as root.
+  and the synthetic `demo` (with the back-check round trip) ran inside the container. The image runs as the
+  unprivileged user `fieldguard` (UID/GID 10001, confirmed with `id` inside the container); outputs go to `/work`
+  (see [Docker](#docker)).
 
 **Not verified**
 
@@ -427,5 +429,21 @@ Tests live in `tests/`. They cover every check module with edge cases (missing c
 all-NaN columns), configuration validation, mocked connectors, report generation, the sink (skipped when
 unreachable) and a small benchmark.
 See [CONTRIBUTING.md](CONTRIBUTING.md) for how to add a check.
+
+### Docker
+
+The image runs as the unprivileged user `fieldguard` (UID/GID 10001) and writes outputs relative to `/work`, which
+is owned by that user. To keep outputs on the host, mount a directory at `/work` that UID 10001 can write:
+
+```bash
+docker build -t fieldguard .
+docker run --rm fieldguard version
+mkdir -p fieldguard_output && sudo chown 10001:10001 fieldguard_output   # Linux hosts
+docker run --rm -v "$PWD/fieldguard_output:/work/fieldguard_output" fieldguard demo
+```
+
+Alternatively run as your own user with `--user "$(id -u):$(id -g)"` (outputs then belong to you), or use a named
+volume (`-v fieldguard-work:/work`), which starts with the image's ownership. Docker Desktop on Windows and macOS
+handles bind-mount permissions itself, so no `chown` is needed there.
 
 Licence: Apache-2.0. See `LICENSE` and `NOTICE`.
