@@ -1,7 +1,7 @@
 # Data sources
 
 This file lists every data source FieldGuard depends on, what is and is not in the repository, and where the
-outputs of this release are stored. It was last checked on 2026-10-13.
+outputs of this release are stored. It was last checked on 2026-10-31.
 
 ## Summary
 
@@ -18,7 +18,7 @@ outputs of this release are stored. It was last checked on 2026-10-13.
 | Path | What it is | Origin |
 |---|---|---|
 | `examples/example_project.yaml` | Annotated example project file for a household survey | Written for this project. It refers to `raw/household_export.csv`, which is not included. |
-| `integrations/grafana/fieldguard.json` | Grafana dashboard for the PostgreSQL schema | Written for this project. Not tested in a running Grafana. |
+| `integrations/grafana/fieldguard.json` | Grafana dashboard for the PostgreSQL schema | Written for this project. Imported into a throwaway Grafana 13.2 container through the import API; every panel query ran against a database written by the sink (synthetic data only). Not reviewed visually in a browser. |
 | `.env.example` | Names of environment variables; all values are blank or placeholders | Written for this project. |
 | `tests/` | Pytest suite. Survey-shaped data is generated inside the tests (`tests/conftest.py`, `fieldguard.synthetic`). | Written for this project. No binary fixtures. |
 
@@ -74,7 +74,7 @@ carries the label in the summary, workbook and HTML report.
 | KoboToolbox API v2 | `fieldguard fetch` (`type: kobo`) | None |
 | ODK Central OData | `fieldguard fetch` (`type: odk`) | None |
 | SurveyCTO server API | `fieldguard fetch` (`type: surveycto`) | None |
-| PostgreSQL (optional sink) | `FIELDGUARD_DATABASE_URL` | None. No database was reachable, so the sink was skipped and the live test was not run. |
+| PostgreSQL (optional sink) | `FIELDGUARD_DATABASE_URL` | None. The sink only writes. The live tests (`-m postgres`) and incremental runs wrote synthetic demo results to throwaway local databases, which were dropped afterwards. |
 
 Credentials are read from environment variables and are never stored in files or printed.
 
@@ -87,8 +87,8 @@ Methods and practice were checked against these sources. Only links and short pa
 * IPA Knowledge Hub, *High Frequency Checks*: https://data.poverty-action.org/data-quality/high-frequency-checks.html
 * DIME Analytics, *High Frequency Checks* and *Back Checks*, DIME Wiki: https://dimewiki.worldbank.org/High_Frequency_Checks and https://dimewiki.worldbank.org/Back_Checks
 
-The remaining references in `README.md` are cited from the literature and are marked there by how far they were
-checked.
+The remaining references in `README.md` are cited from the literature. Each was checked in October 2026 against
+the publisher, Crossref or the organisation's own page.
 
 ## 6. Outputs of this release
 
