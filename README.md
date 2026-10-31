@@ -34,6 +34,7 @@ Status: alpha (v0.1.0). Licence: Apache-2.0 (see `LICENSE` and `NOTICE`).
 - [Limitations](#limitations)
 - [References](#references)
 - [Development](#development)
+- [Project status](#project-status)
 
 ## Quickstart
 
@@ -53,7 +54,8 @@ uv run python -m fieldguard backcheck --config my_project.yaml --compare reinter
 
 `uv run fieldguard ...` works too (console script). If `--out` is omitted, `demo` and `benchmark` write to
 `$FIELDGUARD_REPORTS_DIR/demo` (or `.../benchmark`) when that variable is set, otherwise to `fieldguard_output/`.
-The CLI does not read `.env` files: export the variables in your shell.
+The CLI does not read `.env` files: export the variables in your shell. To run FieldGuard in a container instead
+of a local venv, see [Docker](#docker).
 
 Other commands: `run --incremental` (only record-level issues for submissions not seen before), `run --strict`
 (stop at the first failing check), `run --no-sink`, `run --data FILE` (override `data.path`), and
@@ -333,8 +335,9 @@ What was exercised for v0.1.0 (October 2026), beyond the unit tests (all on synt
 
 **Verified**
 
-* Test suite: `uv run pytest` passes locally, including the live PostgreSQL tests below; CI runs lint and tests on
-  every push and pull request (`.github/workflows/ci.yml`).
+* Test suite: `uv run pytest` passes locally (re-run on 31 October 2026: 222 tests, of which the 2 live PostgreSQL
+  tests ran against a throwaway database and passed). CI checks the lock file, lint, formatting and tests on every
+  push and pull request (`.github/workflows/ci.yml`).
 * PostgreSQL sink: a throwaway `postgres:17` container. The live tests (`-m postgres`) passed, and two
   `fieldguard run --incremental` calls on the synthetic demo wrote 2 runs, 78 issues, 20 scorecard rows and 95 seen
   records; the second run correctly reported 0 new records. This found and fixed a bug: the first incremental run
@@ -344,7 +347,8 @@ What was exercised for v0.1.0 (October 2026), beyond the unit tests (all on synt
 * Docker image: built from the `Dockerfile` (python:3.12-slim, about 900 MB with all extras); `--help`, `version`
   and the synthetic `demo` (with the back-check round trip) ran inside the container. The image runs as the
   unprivileged user `fieldguard` (UID/GID 10001, confirmed with `id` inside the container); outputs go to `/work`
-  (see [Docker](#docker)).
+  (see [Docker](#docker)). Rebuilt and re-run on 31 October 2026: `version` and `demo` ran as UID 10001 and wrote
+  their files, owned by `fieldguard`, to a named volume at `/work`.
 
 **Not verified**
 
@@ -425,6 +429,17 @@ uv run ruff check --fix .
 uv run ruff format .
 ```
 
+To run the two live PostgreSQL tests, create a throwaway database, point `FIELDGUARD_DATABASE_URL` at it in your
+shell (never in a file), run the `postgres` marker and drop the database afterwards. The round-trip test writes to
+the default `fieldguard` schema, so do not point it at a database you care about:
+
+```bash
+createdb -h 127.0.0.1 -U <user> fieldguard_pytest          # or: docker exec <container> createdb -U <user> fieldguard_pytest
+export FIELDGUARD_DATABASE_URL='postgresql+psycopg://<user>:<password>@127.0.0.1:5432/fieldguard_pytest'
+uv run pytest -q -m postgres                                 # 2 passed
+dropdb -h 127.0.0.1 -U <user> fieldguard_pytest
+```
+
 Tests live in `tests/`. They cover every check module with edge cases (missing columns, timezones, empty data,
 all-NaN columns), configuration validation, mocked connectors, report generation, the sink (skipped when
 unreachable) and a small benchmark.
@@ -445,5 +460,23 @@ docker run --rm -v "$PWD/fieldguard_output:/work/fieldguard_output" fieldguard d
 Alternatively run as your own user with `--user "$(id -u):$(id -g)"` (outputs then belong to you), or use a named
 volume (`-v fieldguard-work:/work`), which starts with the image's ownership. Docker Desktop on Windows and macOS
 handles bind-mount permissions itself, so no `chown` is needed there.
+
+## Project status
+
+As of 31 October 2026, v0.1.0 (alpha) is complete for its stated scope: the fourteen checks, enumerator scoring,
+back-check sampling and comparison, CSV/Parquet/Excel/HTML outputs, the PostgreSQL sink with daily incremental
+runs, the Grafana dashboard, the three API connectors, the synthetic demo and benchmark, CI and a non-root Docker
+image. The test suite passes, the dependency lock file (`uv.lock`) is current, and the Docker build installs from
+it with `--frozen`. There are no open TODO or FIXME notes in the code.
+
+What remains needs the owner or real fieldwork, not more code:
+
+* **Calibration on real data.** Thresholds, scoring ramps and `flag_threshold` are untested on a real survey; follow
+  the steps under [Limitations](#limitations) once a past round with known back-check outcomes is available.
+* **Live connector tests.** The KoboToolbox, ODK Central and SurveyCTO connectors need a real (preferably read-only)
+  account on each platform to be tested against a live server.
+* **Grafana in a browser.** The dashboard's queries are verified; its layout has not been reviewed visually.
+* **Release.** The `v0.1.0` tag predates the non-root Docker image and later documentation and CI changes; whether
+  to tag a v0.1.1 or publish a release or image is the owner's decision.
 
 Licence: Apache-2.0. See `LICENSE` and `NOTICE`.
