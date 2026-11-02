@@ -1,0 +1,16 @@
+# Weekly literature watch (ComputationalLab agents_lab.litwatch). Edit scope and search terms freely.
+# last_run is set by the tool after each completed digest (watch-<date>.md in this folder).
+project: fieldguard
+scope: >
+  Survey data quality and interviewer fabrication detection ("high-frequency checks") for CAPI survey exports
+  (KoboToolbox, ODK Central, SurveyCTO): paradata and timing checks, enumerator scoring, outlier and duplicate
+  detection, back-checks, curbstoning and falsification detection methods, and open tools for monitoring and
+  evaluation teams.
+search_terms:
+  - interviewer falsification detection survey data
+  - curbstoning fabricated interviews machine learning
+  - survey paradata quality control CAPI
+  - high-frequency checks survey monitoring tool
+  - KoboToolbox ODK SurveyCTO data quality
+first_lookback_days: 90
+last_run: 2026-11-02
