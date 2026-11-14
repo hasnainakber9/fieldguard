@@ -1,0 +1,1039 @@
+check_id,enumerator,n,is_fabricator,run_id,fabricator,model,strategy,paradata,seed
+benford,E005,1,True,test-s201-classic-content_only,rule-based,-,-,content_only,201
+benford,E018,1,False,test-s201-classic-content_only,rule-based,-,-,content_only,201
+benford,E029,1,True,test-s201-classic-content_only,rule-based,-,-,content_only,201
+constraints,E029,1,True,test-s201-classic-content_only,rule-based,-,-,content_only,201
+duration,E003,2,False,test-s201-classic-content_only,rule-based,-,-,content_only,201
+duration,E010,1,False,test-s201-classic-content_only,rule-based,-,-,content_only,201
+duration,E013,3,False,test-s201-classic-content_only,rule-based,-,-,content_only,201
+duration,E018,1,False,test-s201-classic-content_only,rule-based,-,-,content_only,201
+duration,E019,1,False,test-s201-classic-content_only,rule-based,-,-,content_only,201
+duration,E024,1,False,test-s201-classic-content_only,rule-based,-,-,content_only,201
+duration,E025,1,False,test-s201-classic-content_only,rule-based,-,-,content_only,201
+duration,E027,2,False,test-s201-classic-content_only,rule-based,-,-,content_only,201
+enumerator_risk,E005,1,True,test-s201-classic-content_only,rule-based,-,-,content_only,201
+enumerator_risk,E009,1,True,test-s201-classic-content_only,rule-based,-,-,content_only,201
+heaping,E009,1,True,test-s201-classic-content_only,rule-based,-,-,content_only,201
+nonresponse,E022,1,False,test-s201-classic-content_only,rule-based,-,-,content_only,201
+outliers,E001,1,False,test-s201-classic-content_only,rule-based,-,-,content_only,201
+outliers,E002,2,False,test-s201-classic-content_only,rule-based,-,-,content_only,201
+outliers,E004,4,False,test-s201-classic-content_only,rule-based,-,-,content_only,201
+outliers,E005,1,True,test-s201-classic-content_only,rule-based,-,-,content_only,201
+outliers,E006,2,False,test-s201-classic-content_only,rule-based,-,-,content_only,201
+outliers,E007,1,False,test-s201-classic-content_only,rule-based,-,-,content_only,201
+outliers,E008,1,False,test-s201-classic-content_only,rule-based,-,-,content_only,201
+outliers,E010,1,False,test-s201-classic-content_only,rule-based,-,-,content_only,201
+outliers,E011,5,False,test-s201-classic-content_only,rule-based,-,-,content_only,201
+outliers,E012,2,False,test-s201-classic-content_only,rule-based,-,-,content_only,201
+outliers,E013,3,False,test-s201-classic-content_only,rule-based,-,-,content_only,201
+outliers,E014,5,False,test-s201-classic-content_only,rule-based,-,-,content_only,201
+outliers,E015,2,False,test-s201-classic-content_only,rule-based,-,-,content_only,201
+outliers,E016,1,False,test-s201-classic-content_only,rule-based,-,-,content_only,201
+outliers,E017,2,False,test-s201-classic-content_only,rule-based,-,-,content_only,201
+outliers,E019,4,False,test-s201-classic-content_only,rule-based,-,-,content_only,201
+outliers,E020,3,False,test-s201-classic-content_only,rule-based,-,-,content_only,201
+outliers,E021,1,False,test-s201-classic-content_only,rule-based,-,-,content_only,201
+outliers,E022,2,False,test-s201-classic-content_only,rule-based,-,-,content_only,201
+outliers,E023,4,False,test-s201-classic-content_only,rule-based,-,-,content_only,201
+outliers,E024,4,False,test-s201-classic-content_only,rule-based,-,-,content_only,201
+outliers,E026,5,False,test-s201-classic-content_only,rule-based,-,-,content_only,201
+outliers,E027,4,False,test-s201-classic-content_only,rule-based,-,-,content_only,201
+outliers,E028,4,False,test-s201-classic-content_only,rule-based,-,-,content_only,201
+outliers,E029,2,True,test-s201-classic-content_only,rule-based,-,-,content_only,201
+outliers,E030,5,False,test-s201-classic-content_only,rule-based,-,-,content_only,201
+straightlining,E005,1,True,test-s201-classic-content_only,rule-based,-,-,content_only,201
+straightlining,E009,1,True,test-s201-classic-content_only,rule-based,-,-,content_only,201
+duration,E003,2,False,test-s201-classic-with_paradata,rule-based,-,-,with_paradata,201
+duration,E005,5,True,test-s201-classic-with_paradata,rule-based,-,-,with_paradata,201
+duration,E006,1,False,test-s201-classic-with_paradata,rule-based,-,-,with_paradata,201
+duration,E010,1,False,test-s201-classic-with_paradata,rule-based,-,-,with_paradata,201
+duration,E012,2,False,test-s201-classic-with_paradata,rule-based,-,-,with_paradata,201
+duration,E013,1,False,test-s201-classic-with_paradata,rule-based,-,-,with_paradata,201
+duration,E014,1,False,test-s201-classic-with_paradata,rule-based,-,-,with_paradata,201
+duration,E015,1,False,test-s201-classic-with_paradata,rule-based,-,-,with_paradata,201
+duration,E016,1,False,test-s201-classic-with_paradata,rule-based,-,-,with_paradata,201
+duration,E018,1,False,test-s201-classic-with_paradata,rule-based,-,-,with_paradata,201
+duration,E021,4,False,test-s201-classic-with_paradata,rule-based,-,-,with_paradata,201
+duration,E022,1,False,test-s201-classic-with_paradata,rule-based,-,-,with_paradata,201
+duration,E023,1,False,test-s201-classic-with_paradata,rule-based,-,-,with_paradata,201
+duration,E025,1,False,test-s201-classic-with_paradata,rule-based,-,-,with_paradata,201
+duration,E030,2,False,test-s201-classic-with_paradata,rule-based,-,-,with_paradata,201
+enumerator_risk,E005,1,True,test-s201-classic-with_paradata,rule-based,-,-,with_paradata,201
+enumerator_risk,E009,1,True,test-s201-classic-with_paradata,rule-based,-,-,with_paradata,201
+enumerator_risk,E029,1,True,test-s201-classic-with_paradata,rule-based,-,-,with_paradata,201
+gps,E029,26,True,test-s201-classic-with_paradata,rule-based,-,-,with_paradata,201
+heaping,E005,1,True,test-s201-classic-with_paradata,rule-based,-,-,with_paradata,201
+heaping,E009,1,True,test-s201-classic-with_paradata,rule-based,-,-,with_paradata,201
+nonresponse,E006,1,False,test-s201-classic-with_paradata,rule-based,-,-,with_paradata,201
+outliers,E001,1,False,test-s201-classic-with_paradata,rule-based,-,-,with_paradata,201
+outliers,E002,1,False,test-s201-classic-with_paradata,rule-based,-,-,with_paradata,201
+outliers,E004,3,False,test-s201-classic-with_paradata,rule-based,-,-,with_paradata,201
+outliers,E005,1,True,test-s201-classic-with_paradata,rule-based,-,-,with_paradata,201
+outliers,E006,2,False,test-s201-classic-with_paradata,rule-based,-,-,with_paradata,201
+outliers,E007,3,False,test-s201-classic-with_paradata,rule-based,-,-,with_paradata,201
+outliers,E008,2,False,test-s201-classic-with_paradata,rule-based,-,-,with_paradata,201
+outliers,E009,1,True,test-s201-classic-with_paradata,rule-based,-,-,with_paradata,201
+outliers,E010,2,False,test-s201-classic-with_paradata,rule-based,-,-,with_paradata,201
+outliers,E011,1,False,test-s201-classic-with_paradata,rule-based,-,-,with_paradata,201
+outliers,E012,3,False,test-s201-classic-with_paradata,rule-based,-,-,with_paradata,201
+outliers,E013,5,False,test-s201-classic-with_paradata,rule-based,-,-,with_paradata,201
+outliers,E014,6,False,test-s201-classic-with_paradata,rule-based,-,-,with_paradata,201
+outliers,E015,3,False,test-s201-classic-with_paradata,rule-based,-,-,with_paradata,201
+outliers,E017,1,False,test-s201-classic-with_paradata,rule-based,-,-,with_paradata,201
+outliers,E018,1,False,test-s201-classic-with_paradata,rule-based,-,-,with_paradata,201
+outliers,E019,3,False,test-s201-classic-with_paradata,rule-based,-,-,with_paradata,201
+outliers,E020,2,False,test-s201-classic-with_paradata,rule-based,-,-,with_paradata,201
+outliers,E021,5,False,test-s201-classic-with_paradata,rule-based,-,-,with_paradata,201
+outliers,E022,3,False,test-s201-classic-with_paradata,rule-based,-,-,with_paradata,201
+outliers,E023,3,False,test-s201-classic-with_paradata,rule-based,-,-,with_paradata,201
+outliers,E024,3,False,test-s201-classic-with_paradata,rule-based,-,-,with_paradata,201
+outliers,E025,3,False,test-s201-classic-with_paradata,rule-based,-,-,with_paradata,201
+outliers,E026,2,False,test-s201-classic-with_paradata,rule-based,-,-,with_paradata,201
+outliers,E027,3,False,test-s201-classic-with_paradata,rule-based,-,-,with_paradata,201
+outliers,E028,2,False,test-s201-classic-with_paradata,rule-based,-,-,with_paradata,201
+outliers,E029,6,True,test-s201-classic-with_paradata,rule-based,-,-,with_paradata,201
+outliers,E030,3,False,test-s201-classic-with_paradata,rule-based,-,-,with_paradata,201
+straightlining,E005,1,True,test-s201-classic-with_paradata,rule-based,-,-,with_paradata,201
+straightlining,E009,1,True,test-s201-classic-with_paradata,rule-based,-,-,with_paradata,201
+straightlining,E029,1,True,test-s201-classic-with_paradata,rule-based,-,-,with_paradata,201
+timestamps,E029,32,True,test-s201-classic-with_paradata,rule-based,-,-,with_paradata,201
+duration,E001,1,False,test-s201-claude-opus-5-5-cc-S0_naive-content_only,language model,claude-opus-5-5-cc,S0_naive,content_only,201
+duration,E005,3,True,test-s201-claude-opus-5-5-cc-S0_naive-content_only,language model,claude-opus-5-5-cc,S0_naive,content_only,201
+duration,E017,2,False,test-s201-claude-opus-5-5-cc-S0_naive-content_only,language model,claude-opus-5-5-cc,S0_naive,content_only,201
+duration,E019,2,False,test-s201-claude-opus-5-5-cc-S0_naive-content_only,language model,claude-opus-5-5-cc,S0_naive,content_only,201
+duration,E021,1,False,test-s201-claude-opus-5-5-cc-S0_naive-content_only,language model,claude-opus-5-5-cc,S0_naive,content_only,201
+duration,E023,1,False,test-s201-claude-opus-5-5-cc-S0_naive-content_only,language model,claude-opus-5-5-cc,S0_naive,content_only,201
+duration,E024,1,False,test-s201-claude-opus-5-5-cc-S0_naive-content_only,language model,claude-opus-5-5-cc,S0_naive,content_only,201
+duration,E028,1,False,test-s201-claude-opus-5-5-cc-S0_naive-content_only,language model,claude-opus-5-5-cc,S0_naive,content_only,201
+heaping,E005,1,True,test-s201-claude-opus-5-5-cc-S0_naive-content_only,language model,claude-opus-5-5-cc,S0_naive,content_only,201
+heaping,E014,1,True,test-s201-claude-opus-5-5-cc-S0_naive-content_only,language model,claude-opus-5-5-cc,S0_naive,content_only,201
+heaping,E015,1,True,test-s201-claude-opus-5-5-cc-S0_naive-content_only,language model,claude-opus-5-5-cc,S0_naive,content_only,201
+nonresponse,E010,1,False,test-s201-claude-opus-5-5-cc-S0_naive-content_only,language model,claude-opus-5-5-cc,S0_naive,content_only,201
+outliers,E001,1,False,test-s201-claude-opus-5-5-cc-S0_naive-content_only,language model,claude-opus-5-5-cc,S0_naive,content_only,201
+outliers,E002,1,False,test-s201-claude-opus-5-5-cc-S0_naive-content_only,language model,claude-opus-5-5-cc,S0_naive,content_only,201
+outliers,E003,3,False,test-s201-claude-opus-5-5-cc-S0_naive-content_only,language model,claude-opus-5-5-cc,S0_naive,content_only,201
+outliers,E004,5,False,test-s201-claude-opus-5-5-cc-S0_naive-content_only,language model,claude-opus-5-5-cc,S0_naive,content_only,201
+outliers,E005,1,True,test-s201-claude-opus-5-5-cc-S0_naive-content_only,language model,claude-opus-5-5-cc,S0_naive,content_only,201
+outliers,E006,3,False,test-s201-claude-opus-5-5-cc-S0_naive-content_only,language model,claude-opus-5-5-cc,S0_naive,content_only,201
+outliers,E007,1,False,test-s201-claude-opus-5-5-cc-S0_naive-content_only,language model,claude-opus-5-5-cc,S0_naive,content_only,201
+outliers,E008,1,False,test-s201-claude-opus-5-5-cc-S0_naive-content_only,language model,claude-opus-5-5-cc,S0_naive,content_only,201
+outliers,E009,6,False,test-s201-claude-opus-5-5-cc-S0_naive-content_only,language model,claude-opus-5-5-cc,S0_naive,content_only,201
+outliers,E010,3,False,test-s201-claude-opus-5-5-cc-S0_naive-content_only,language model,claude-opus-5-5-cc,S0_naive,content_only,201
+outliers,E011,6,False,test-s201-claude-opus-5-5-cc-S0_naive-content_only,language model,claude-opus-5-5-cc,S0_naive,content_only,201
+outliers,E012,2,False,test-s201-claude-opus-5-5-cc-S0_naive-content_only,language model,claude-opus-5-5-cc,S0_naive,content_only,201
+outliers,E013,3,False,test-s201-claude-opus-5-5-cc-S0_naive-content_only,language model,claude-opus-5-5-cc,S0_naive,content_only,201
+outliers,E014,1,True,test-s201-claude-opus-5-5-cc-S0_naive-content_only,language model,claude-opus-5-5-cc,S0_naive,content_only,201
+outliers,E015,3,True,test-s201-claude-opus-5-5-cc-S0_naive-content_only,language model,claude-opus-5-5-cc,S0_naive,content_only,201
+outliers,E016,6,False,test-s201-claude-opus-5-5-cc-S0_naive-content_only,language model,claude-opus-5-5-cc,S0_naive,content_only,201
+outliers,E017,1,False,test-s201-claude-opus-5-5-cc-S0_naive-content_only,language model,claude-opus-5-5-cc,S0_naive,content_only,201
+outliers,E019,3,False,test-s201-claude-opus-5-5-cc-S0_naive-content_only,language model,claude-opus-5-5-cc,S0_naive,content_only,201
+outliers,E020,1,False,test-s201-claude-opus-5-5-cc-S0_naive-content_only,language model,claude-opus-5-5-cc,S0_naive,content_only,201
+outliers,E021,3,False,test-s201-claude-opus-5-5-cc-S0_naive-content_only,language model,claude-opus-5-5-cc,S0_naive,content_only,201
+outliers,E023,2,False,test-s201-claude-opus-5-5-cc-S0_naive-content_only,language model,claude-opus-5-5-cc,S0_naive,content_only,201
+outliers,E024,3,False,test-s201-claude-opus-5-5-cc-S0_naive-content_only,language model,claude-opus-5-5-cc,S0_naive,content_only,201
+outliers,E025,1,False,test-s201-claude-opus-5-5-cc-S0_naive-content_only,language model,claude-opus-5-5-cc,S0_naive,content_only,201
+outliers,E026,1,False,test-s201-claude-opus-5-5-cc-S0_naive-content_only,language model,claude-opus-5-5-cc,S0_naive,content_only,201
+outliers,E028,4,False,test-s201-claude-opus-5-5-cc-S0_naive-content_only,language model,claude-opus-5-5-cc,S0_naive,content_only,201
+outliers,E029,4,False,test-s201-claude-opus-5-5-cc-S0_naive-content_only,language model,claude-opus-5-5-cc,S0_naive,content_only,201
+outliers,E030,3,False,test-s201-claude-opus-5-5-cc-S0_naive-content_only,language model,claude-opus-5-5-cc,S0_naive,content_only,201
+duration,E001,1,False,test-s201-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,201
+duration,E005,23,True,test-s201-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,201
+duration,E014,17,True,test-s201-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,201
+duration,E015,12,True,test-s201-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,201
+duration,E017,2,False,test-s201-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,201
+duration,E019,2,False,test-s201-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,201
+duration,E021,1,False,test-s201-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,201
+duration,E023,1,False,test-s201-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,201
+duration,E024,1,False,test-s201-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,201
+duration,E028,1,False,test-s201-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,201
+enumerator_risk,E005,1,True,test-s201-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,201
+enumerator_risk,E014,1,True,test-s201-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,201
+enumerator_risk,E015,1,True,test-s201-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,201
+gps,E005,28,True,test-s201-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,201
+gps,E014,20,True,test-s201-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,201
+gps,E015,13,True,test-s201-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,201
+heaping,E005,1,True,test-s201-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,201
+heaping,E014,1,True,test-s201-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,201
+heaping,E015,1,True,test-s201-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,201
+nonresponse,E010,1,False,test-s201-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,201
+outliers,E001,1,False,test-s201-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,201
+outliers,E002,1,False,test-s201-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,201
+outliers,E003,3,False,test-s201-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,201
+outliers,E004,5,False,test-s201-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,201
+outliers,E005,1,True,test-s201-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,201
+outliers,E006,3,False,test-s201-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,201
+outliers,E007,1,False,test-s201-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,201
+outliers,E008,1,False,test-s201-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,201
+outliers,E009,6,False,test-s201-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,201
+outliers,E010,3,False,test-s201-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,201
+outliers,E011,6,False,test-s201-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,201
+outliers,E012,2,False,test-s201-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,201
+outliers,E013,3,False,test-s201-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,201
+outliers,E014,1,True,test-s201-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,201
+outliers,E015,3,True,test-s201-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,201
+outliers,E016,6,False,test-s201-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,201
+outliers,E017,1,False,test-s201-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,201
+outliers,E019,3,False,test-s201-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,201
+outliers,E020,1,False,test-s201-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,201
+outliers,E021,3,False,test-s201-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,201
+outliers,E023,2,False,test-s201-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,201
+outliers,E024,3,False,test-s201-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,201
+outliers,E025,1,False,test-s201-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,201
+outliers,E026,1,False,test-s201-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,201
+outliers,E028,4,False,test-s201-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,201
+outliers,E029,4,False,test-s201-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,201
+outliers,E030,3,False,test-s201-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,201
+timestamps,E005,21,True,test-s201-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,201
+timestamps,E014,15,True,test-s201-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,201
+timestamps,E015,11,True,test-s201-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,201
+duration,E001,1,False,test-s201-claude-opus-5-5-cc-S1_informed-content_only,language model,claude-opus-5-5-cc,S1_informed,content_only,201
+duration,E005,3,True,test-s201-claude-opus-5-5-cc-S1_informed-content_only,language model,claude-opus-5-5-cc,S1_informed,content_only,201
+duration,E017,2,False,test-s201-claude-opus-5-5-cc-S1_informed-content_only,language model,claude-opus-5-5-cc,S1_informed,content_only,201
+duration,E019,2,False,test-s201-claude-opus-5-5-cc-S1_informed-content_only,language model,claude-opus-5-5-cc,S1_informed,content_only,201
+duration,E021,1,False,test-s201-claude-opus-5-5-cc-S1_informed-content_only,language model,claude-opus-5-5-cc,S1_informed,content_only,201
+duration,E023,1,False,test-s201-claude-opus-5-5-cc-S1_informed-content_only,language model,claude-opus-5-5-cc,S1_informed,content_only,201
+duration,E024,1,False,test-s201-claude-opus-5-5-cc-S1_informed-content_only,language model,claude-opus-5-5-cc,S1_informed,content_only,201
+duration,E028,1,False,test-s201-claude-opus-5-5-cc-S1_informed-content_only,language model,claude-opus-5-5-cc,S1_informed,content_only,201
+nonresponse,E010,1,False,test-s201-claude-opus-5-5-cc-S1_informed-content_only,language model,claude-opus-5-5-cc,S1_informed,content_only,201
+outliers,E001,1,False,test-s201-claude-opus-5-5-cc-S1_informed-content_only,language model,claude-opus-5-5-cc,S1_informed,content_only,201
+outliers,E002,1,False,test-s201-claude-opus-5-5-cc-S1_informed-content_only,language model,claude-opus-5-5-cc,S1_informed,content_only,201
+outliers,E003,3,False,test-s201-claude-opus-5-5-cc-S1_informed-content_only,language model,claude-opus-5-5-cc,S1_informed,content_only,201
+outliers,E004,5,False,test-s201-claude-opus-5-5-cc-S1_informed-content_only,language model,claude-opus-5-5-cc,S1_informed,content_only,201
+outliers,E005,2,True,test-s201-claude-opus-5-5-cc-S1_informed-content_only,language model,claude-opus-5-5-cc,S1_informed,content_only,201
+outliers,E006,3,False,test-s201-claude-opus-5-5-cc-S1_informed-content_only,language model,claude-opus-5-5-cc,S1_informed,content_only,201
+outliers,E007,1,False,test-s201-claude-opus-5-5-cc-S1_informed-content_only,language model,claude-opus-5-5-cc,S1_informed,content_only,201
+outliers,E008,1,False,test-s201-claude-opus-5-5-cc-S1_informed-content_only,language model,claude-opus-5-5-cc,S1_informed,content_only,201
+outliers,E009,6,False,test-s201-claude-opus-5-5-cc-S1_informed-content_only,language model,claude-opus-5-5-cc,S1_informed,content_only,201
+outliers,E010,3,False,test-s201-claude-opus-5-5-cc-S1_informed-content_only,language model,claude-opus-5-5-cc,S1_informed,content_only,201
+outliers,E011,6,False,test-s201-claude-opus-5-5-cc-S1_informed-content_only,language model,claude-opus-5-5-cc,S1_informed,content_only,201
+outliers,E012,2,False,test-s201-claude-opus-5-5-cc-S1_informed-content_only,language model,claude-opus-5-5-cc,S1_informed,content_only,201
+outliers,E013,3,False,test-s201-claude-opus-5-5-cc-S1_informed-content_only,language model,claude-opus-5-5-cc,S1_informed,content_only,201
+outliers,E015,3,True,test-s201-claude-opus-5-5-cc-S1_informed-content_only,language model,claude-opus-5-5-cc,S1_informed,content_only,201
+outliers,E016,6,False,test-s201-claude-opus-5-5-cc-S1_informed-content_only,language model,claude-opus-5-5-cc,S1_informed,content_only,201
+outliers,E017,1,False,test-s201-claude-opus-5-5-cc-S1_informed-content_only,language model,claude-opus-5-5-cc,S1_informed,content_only,201
+outliers,E019,3,False,test-s201-claude-opus-5-5-cc-S1_informed-content_only,language model,claude-opus-5-5-cc,S1_informed,content_only,201
+outliers,E020,1,False,test-s201-claude-opus-5-5-cc-S1_informed-content_only,language model,claude-opus-5-5-cc,S1_informed,content_only,201
+outliers,E021,3,False,test-s201-claude-opus-5-5-cc-S1_informed-content_only,language model,claude-opus-5-5-cc,S1_informed,content_only,201
+outliers,E023,2,False,test-s201-claude-opus-5-5-cc-S1_informed-content_only,language model,claude-opus-5-5-cc,S1_informed,content_only,201
+outliers,E024,3,False,test-s201-claude-opus-5-5-cc-S1_informed-content_only,language model,claude-opus-5-5-cc,S1_informed,content_only,201
+outliers,E025,1,False,test-s201-claude-opus-5-5-cc-S1_informed-content_only,language model,claude-opus-5-5-cc,S1_informed,content_only,201
+outliers,E026,1,False,test-s201-claude-opus-5-5-cc-S1_informed-content_only,language model,claude-opus-5-5-cc,S1_informed,content_only,201
+outliers,E028,4,False,test-s201-claude-opus-5-5-cc-S1_informed-content_only,language model,claude-opus-5-5-cc,S1_informed,content_only,201
+outliers,E029,4,False,test-s201-claude-opus-5-5-cc-S1_informed-content_only,language model,claude-opus-5-5-cc,S1_informed,content_only,201
+outliers,E030,3,False,test-s201-claude-opus-5-5-cc-S1_informed-content_only,language model,claude-opus-5-5-cc,S1_informed,content_only,201
+duration,E001,1,False,test-s201-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,201
+duration,E005,19,True,test-s201-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,201
+duration,E014,17,True,test-s201-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,201
+duration,E015,16,True,test-s201-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,201
+duration,E017,2,False,test-s201-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,201
+duration,E019,2,False,test-s201-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,201
+duration,E021,1,False,test-s201-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,201
+duration,E023,1,False,test-s201-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,201
+duration,E024,1,False,test-s201-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,201
+duration,E028,1,False,test-s201-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,201
+enumerator_risk,E005,1,True,test-s201-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,201
+enumerator_risk,E014,1,True,test-s201-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,201
+enumerator_risk,E015,1,True,test-s201-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,201
+gps,E005,25,True,test-s201-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,201
+gps,E014,23,True,test-s201-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,201
+gps,E015,12,True,test-s201-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,201
+nonresponse,E010,1,False,test-s201-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,201
+outliers,E001,1,False,test-s201-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,201
+outliers,E002,1,False,test-s201-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,201
+outliers,E003,3,False,test-s201-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,201
+outliers,E004,5,False,test-s201-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,201
+outliers,E005,2,True,test-s201-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,201
+outliers,E006,3,False,test-s201-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,201
+outliers,E007,1,False,test-s201-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,201
+outliers,E008,1,False,test-s201-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,201
+outliers,E009,6,False,test-s201-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,201
+outliers,E010,3,False,test-s201-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,201
+outliers,E011,6,False,test-s201-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,201
+outliers,E012,2,False,test-s201-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,201
+outliers,E013,3,False,test-s201-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,201
+outliers,E015,3,True,test-s201-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,201
+outliers,E016,6,False,test-s201-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,201
+outliers,E017,1,False,test-s201-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,201
+outliers,E019,3,False,test-s201-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,201
+outliers,E020,1,False,test-s201-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,201
+outliers,E021,3,False,test-s201-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,201
+outliers,E023,2,False,test-s201-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,201
+outliers,E024,3,False,test-s201-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,201
+outliers,E025,1,False,test-s201-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,201
+outliers,E026,1,False,test-s201-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,201
+outliers,E028,4,False,test-s201-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,201
+outliers,E029,4,False,test-s201-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,201
+outliers,E030,3,False,test-s201-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,201
+timestamps,E005,22,True,test-s201-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,201
+timestamps,E014,16,True,test-s201-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,201
+timestamps,E015,7,True,test-s201-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,201
+duration,E001,1,False,test-s201-claude-opus-5-5-cc-S2_careful-content_only,language model,claude-opus-5-5-cc,S2_careful,content_only,201
+duration,E005,3,False,test-s201-claude-opus-5-5-cc-S2_careful-content_only,language model,claude-opus-5-5-cc,S2_careful,content_only,201
+duration,E017,2,False,test-s201-claude-opus-5-5-cc-S2_careful-content_only,language model,claude-opus-5-5-cc,S2_careful,content_only,201
+duration,E019,2,False,test-s201-claude-opus-5-5-cc-S2_careful-content_only,language model,claude-opus-5-5-cc,S2_careful,content_only,201
+duration,E021,1,False,test-s201-claude-opus-5-5-cc-S2_careful-content_only,language model,claude-opus-5-5-cc,S2_careful,content_only,201
+duration,E023,1,False,test-s201-claude-opus-5-5-cc-S2_careful-content_only,language model,claude-opus-5-5-cc,S2_careful,content_only,201
+duration,E024,1,False,test-s201-claude-opus-5-5-cc-S2_careful-content_only,language model,claude-opus-5-5-cc,S2_careful,content_only,201
+duration,E028,1,False,test-s201-claude-opus-5-5-cc-S2_careful-content_only,language model,claude-opus-5-5-cc,S2_careful,content_only,201
+heaping,E014,1,True,test-s201-claude-opus-5-5-cc-S2_careful-content_only,language model,claude-opus-5-5-cc,S2_careful,content_only,201
+heaping,E015,1,True,test-s201-claude-opus-5-5-cc-S2_careful-content_only,language model,claude-opus-5-5-cc,S2_careful,content_only,201
+nonresponse,E010,1,False,test-s201-claude-opus-5-5-cc-S2_careful-content_only,language model,claude-opus-5-5-cc,S2_careful,content_only,201
+outliers,E001,1,False,test-s201-claude-opus-5-5-cc-S2_careful-content_only,language model,claude-opus-5-5-cc,S2_careful,content_only,201
+outliers,E002,1,False,test-s201-claude-opus-5-5-cc-S2_careful-content_only,language model,claude-opus-5-5-cc,S2_careful,content_only,201
+outliers,E003,3,False,test-s201-claude-opus-5-5-cc-S2_careful-content_only,language model,claude-opus-5-5-cc,S2_careful,content_only,201
+outliers,E004,5,False,test-s201-claude-opus-5-5-cc-S2_careful-content_only,language model,claude-opus-5-5-cc,S2_careful,content_only,201
+outliers,E005,2,False,test-s201-claude-opus-5-5-cc-S2_careful-content_only,language model,claude-opus-5-5-cc,S2_careful,content_only,201
+outliers,E006,3,False,test-s201-claude-opus-5-5-cc-S2_careful-content_only,language model,claude-opus-5-5-cc,S2_careful,content_only,201
+outliers,E007,1,False,test-s201-claude-opus-5-5-cc-S2_careful-content_only,language model,claude-opus-5-5-cc,S2_careful,content_only,201
+outliers,E008,1,False,test-s201-claude-opus-5-5-cc-S2_careful-content_only,language model,claude-opus-5-5-cc,S2_careful,content_only,201
+outliers,E009,6,False,test-s201-claude-opus-5-5-cc-S2_careful-content_only,language model,claude-opus-5-5-cc,S2_careful,content_only,201
+outliers,E010,3,False,test-s201-claude-opus-5-5-cc-S2_careful-content_only,language model,claude-opus-5-5-cc,S2_careful,content_only,201
+outliers,E011,6,False,test-s201-claude-opus-5-5-cc-S2_careful-content_only,language model,claude-opus-5-5-cc,S2_careful,content_only,201
+outliers,E012,2,False,test-s201-claude-opus-5-5-cc-S2_careful-content_only,language model,claude-opus-5-5-cc,S2_careful,content_only,201
+outliers,E013,3,False,test-s201-claude-opus-5-5-cc-S2_careful-content_only,language model,claude-opus-5-5-cc,S2_careful,content_only,201
+outliers,E015,3,True,test-s201-claude-opus-5-5-cc-S2_careful-content_only,language model,claude-opus-5-5-cc,S2_careful,content_only,201
+outliers,E016,6,False,test-s201-claude-opus-5-5-cc-S2_careful-content_only,language model,claude-opus-5-5-cc,S2_careful,content_only,201
+outliers,E017,1,False,test-s201-claude-opus-5-5-cc-S2_careful-content_only,language model,claude-opus-5-5-cc,S2_careful,content_only,201
+outliers,E019,3,False,test-s201-claude-opus-5-5-cc-S2_careful-content_only,language model,claude-opus-5-5-cc,S2_careful,content_only,201
+outliers,E020,1,False,test-s201-claude-opus-5-5-cc-S2_careful-content_only,language model,claude-opus-5-5-cc,S2_careful,content_only,201
+outliers,E021,3,False,test-s201-claude-opus-5-5-cc-S2_careful-content_only,language model,claude-opus-5-5-cc,S2_careful,content_only,201
+outliers,E023,2,False,test-s201-claude-opus-5-5-cc-S2_careful-content_only,language model,claude-opus-5-5-cc,S2_careful,content_only,201
+outliers,E024,3,False,test-s201-claude-opus-5-5-cc-S2_careful-content_only,language model,claude-opus-5-5-cc,S2_careful,content_only,201
+outliers,E025,1,False,test-s201-claude-opus-5-5-cc-S2_careful-content_only,language model,claude-opus-5-5-cc,S2_careful,content_only,201
+outliers,E026,1,False,test-s201-claude-opus-5-5-cc-S2_careful-content_only,language model,claude-opus-5-5-cc,S2_careful,content_only,201
+outliers,E028,4,False,test-s201-claude-opus-5-5-cc-S2_careful-content_only,language model,claude-opus-5-5-cc,S2_careful,content_only,201
+outliers,E029,4,False,test-s201-claude-opus-5-5-cc-S2_careful-content_only,language model,claude-opus-5-5-cc,S2_careful,content_only,201
+outliers,E030,3,False,test-s201-claude-opus-5-5-cc-S2_careful-content_only,language model,claude-opus-5-5-cc,S2_careful,content_only,201
+duration,E001,1,False,test-s201-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,201
+duration,E005,3,False,test-s201-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,201
+duration,E014,19,True,test-s201-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,201
+duration,E015,15,True,test-s201-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,201
+duration,E017,2,False,test-s201-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,201
+duration,E019,2,False,test-s201-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,201
+duration,E021,1,False,test-s201-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,201
+duration,E023,1,False,test-s201-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,201
+duration,E024,1,False,test-s201-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,201
+duration,E028,1,False,test-s201-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,201
+enumerator_risk,E014,1,True,test-s201-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,201
+enumerator_risk,E015,1,True,test-s201-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,201
+gps,E014,22,True,test-s201-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,201
+gps,E015,12,True,test-s201-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,201
+heaping,E014,1,True,test-s201-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,201
+heaping,E015,1,True,test-s201-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,201
+nonresponse,E010,1,False,test-s201-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,201
+outliers,E001,1,False,test-s201-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,201
+outliers,E002,1,False,test-s201-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,201
+outliers,E003,3,False,test-s201-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,201
+outliers,E004,5,False,test-s201-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,201
+outliers,E005,2,False,test-s201-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,201
+outliers,E006,3,False,test-s201-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,201
+outliers,E007,1,False,test-s201-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,201
+outliers,E008,1,False,test-s201-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,201
+outliers,E009,6,False,test-s201-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,201
+outliers,E010,3,False,test-s201-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,201
+outliers,E011,6,False,test-s201-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,201
+outliers,E012,2,False,test-s201-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,201
+outliers,E013,3,False,test-s201-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,201
+outliers,E015,3,True,test-s201-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,201
+outliers,E016,6,False,test-s201-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,201
+outliers,E017,1,False,test-s201-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,201
+outliers,E019,3,False,test-s201-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,201
+outliers,E020,1,False,test-s201-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,201
+outliers,E021,3,False,test-s201-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,201
+outliers,E023,2,False,test-s201-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,201
+outliers,E024,3,False,test-s201-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,201
+outliers,E025,1,False,test-s201-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,201
+outliers,E026,1,False,test-s201-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,201
+outliers,E028,4,False,test-s201-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,201
+outliers,E029,4,False,test-s201-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,201
+outliers,E030,3,False,test-s201-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,201
+timestamps,E014,6,True,test-s201-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,201
+timestamps,E015,11,True,test-s201-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,201
+benford,E013,1,True,test-s202-classic-content_only,rule-based,-,-,content_only,202
+duration,E001,2,False,test-s202-classic-content_only,rule-based,-,-,content_only,202
+duration,E003,2,False,test-s202-classic-content_only,rule-based,-,-,content_only,202
+duration,E007,1,False,test-s202-classic-content_only,rule-based,-,-,content_only,202
+duration,E009,1,False,test-s202-classic-content_only,rule-based,-,-,content_only,202
+duration,E012,1,False,test-s202-classic-content_only,rule-based,-,-,content_only,202
+duration,E015,1,False,test-s202-classic-content_only,rule-based,-,-,content_only,202
+duration,E017,2,False,test-s202-classic-content_only,rule-based,-,-,content_only,202
+duration,E020,1,False,test-s202-classic-content_only,rule-based,-,-,content_only,202
+duration,E022,1,False,test-s202-classic-content_only,rule-based,-,-,content_only,202
+duration,E030,1,False,test-s202-classic-content_only,rule-based,-,-,content_only,202
+enumerator_risk,E013,1,True,test-s202-classic-content_only,rule-based,-,-,content_only,202
+heaping,E006,1,True,test-s202-classic-content_only,rule-based,-,-,content_only,202
+heaping,E013,1,True,test-s202-classic-content_only,rule-based,-,-,content_only,202
+outliers,E001,2,False,test-s202-classic-content_only,rule-based,-,-,content_only,202
+outliers,E002,5,False,test-s202-classic-content_only,rule-based,-,-,content_only,202
+outliers,E003,2,False,test-s202-classic-content_only,rule-based,-,-,content_only,202
+outliers,E004,2,False,test-s202-classic-content_only,rule-based,-,-,content_only,202
+outliers,E005,2,False,test-s202-classic-content_only,rule-based,-,-,content_only,202
+outliers,E006,1,True,test-s202-classic-content_only,rule-based,-,-,content_only,202
+outliers,E007,1,False,test-s202-classic-content_only,rule-based,-,-,content_only,202
+outliers,E008,2,False,test-s202-classic-content_only,rule-based,-,-,content_only,202
+outliers,E009,1,False,test-s202-classic-content_only,rule-based,-,-,content_only,202
+outliers,E010,1,False,test-s202-classic-content_only,rule-based,-,-,content_only,202
+outliers,E011,2,True,test-s202-classic-content_only,rule-based,-,-,content_only,202
+outliers,E012,1,False,test-s202-classic-content_only,rule-based,-,-,content_only,202
+outliers,E014,2,False,test-s202-classic-content_only,rule-based,-,-,content_only,202
+outliers,E015,1,False,test-s202-classic-content_only,rule-based,-,-,content_only,202
+outliers,E016,2,False,test-s202-classic-content_only,rule-based,-,-,content_only,202
+outliers,E017,3,False,test-s202-classic-content_only,rule-based,-,-,content_only,202
+outliers,E018,3,False,test-s202-classic-content_only,rule-based,-,-,content_only,202
+outliers,E019,1,False,test-s202-classic-content_only,rule-based,-,-,content_only,202
+outliers,E020,1,False,test-s202-classic-content_only,rule-based,-,-,content_only,202
+outliers,E021,1,False,test-s202-classic-content_only,rule-based,-,-,content_only,202
+outliers,E022,2,False,test-s202-classic-content_only,rule-based,-,-,content_only,202
+outliers,E025,2,False,test-s202-classic-content_only,rule-based,-,-,content_only,202
+outliers,E026,5,False,test-s202-classic-content_only,rule-based,-,-,content_only,202
+outliers,E027,2,False,test-s202-classic-content_only,rule-based,-,-,content_only,202
+outliers,E028,3,False,test-s202-classic-content_only,rule-based,-,-,content_only,202
+outliers,E029,5,False,test-s202-classic-content_only,rule-based,-,-,content_only,202
+straightlining,E006,1,True,test-s202-classic-content_only,rule-based,-,-,content_only,202
+straightlining,E011,1,True,test-s202-classic-content_only,rule-based,-,-,content_only,202
+straightlining,E013,1,True,test-s202-classic-content_only,rule-based,-,-,content_only,202
+benford,E011,1,True,test-s202-classic-with_paradata,rule-based,-,-,with_paradata,202
+benford,E013,1,True,test-s202-classic-with_paradata,rule-based,-,-,with_paradata,202
+constraints,E006,1,True,test-s202-classic-with_paradata,rule-based,-,-,with_paradata,202
+duration,E001,2,False,test-s202-classic-with_paradata,rule-based,-,-,with_paradata,202
+duration,E003,2,False,test-s202-classic-with_paradata,rule-based,-,-,with_paradata,202
+duration,E008,1,False,test-s202-classic-with_paradata,rule-based,-,-,with_paradata,202
+duration,E009,1,False,test-s202-classic-with_paradata,rule-based,-,-,with_paradata,202
+duration,E012,1,False,test-s202-classic-with_paradata,rule-based,-,-,with_paradata,202
+duration,E014,1,False,test-s202-classic-with_paradata,rule-based,-,-,with_paradata,202
+duration,E022,2,False,test-s202-classic-with_paradata,rule-based,-,-,with_paradata,202
+duration,E023,1,False,test-s202-classic-with_paradata,rule-based,-,-,with_paradata,202
+enumerator_effects,E011,1,True,test-s202-classic-with_paradata,rule-based,-,-,with_paradata,202
+enumerator_risk,E006,1,True,test-s202-classic-with_paradata,rule-based,-,-,with_paradata,202
+enumerator_risk,E011,1,True,test-s202-classic-with_paradata,rule-based,-,-,with_paradata,202
+enumerator_risk,E013,1,True,test-s202-classic-with_paradata,rule-based,-,-,with_paradata,202
+gps,E006,39,True,test-s202-classic-with_paradata,rule-based,-,-,with_paradata,202
+gps,E013,22,True,test-s202-classic-with_paradata,rule-based,-,-,with_paradata,202
+near_duplicates,E011,2,True,test-s202-classic-with_paradata,rule-based,-,-,with_paradata,202
+near_duplicates,E013,9,True,test-s202-classic-with_paradata,rule-based,-,-,with_paradata,202
+nonresponse,E010,1,False,test-s202-classic-with_paradata,rule-based,-,-,with_paradata,202
+outliers,E001,2,False,test-s202-classic-with_paradata,rule-based,-,-,with_paradata,202
+outliers,E002,5,False,test-s202-classic-with_paradata,rule-based,-,-,with_paradata,202
+outliers,E003,2,False,test-s202-classic-with_paradata,rule-based,-,-,with_paradata,202
+outliers,E004,2,False,test-s202-classic-with_paradata,rule-based,-,-,with_paradata,202
+outliers,E005,2,False,test-s202-classic-with_paradata,rule-based,-,-,with_paradata,202
+outliers,E006,4,True,test-s202-classic-with_paradata,rule-based,-,-,with_paradata,202
+outliers,E007,1,False,test-s202-classic-with_paradata,rule-based,-,-,with_paradata,202
+outliers,E009,2,False,test-s202-classic-with_paradata,rule-based,-,-,with_paradata,202
+outliers,E010,2,False,test-s202-classic-with_paradata,rule-based,-,-,with_paradata,202
+outliers,E011,5,True,test-s202-classic-with_paradata,rule-based,-,-,with_paradata,202
+outliers,E012,4,False,test-s202-classic-with_paradata,rule-based,-,-,with_paradata,202
+outliers,E013,1,True,test-s202-classic-with_paradata,rule-based,-,-,with_paradata,202
+outliers,E014,5,False,test-s202-classic-with_paradata,rule-based,-,-,with_paradata,202
+outliers,E015,4,False,test-s202-classic-with_paradata,rule-based,-,-,with_paradata,202
+outliers,E016,1,False,test-s202-classic-with_paradata,rule-based,-,-,with_paradata,202
+outliers,E017,3,False,test-s202-classic-with_paradata,rule-based,-,-,with_paradata,202
+outliers,E018,1,False,test-s202-classic-with_paradata,rule-based,-,-,with_paradata,202
+outliers,E019,5,False,test-s202-classic-with_paradata,rule-based,-,-,with_paradata,202
+outliers,E020,2,False,test-s202-classic-with_paradata,rule-based,-,-,with_paradata,202
+outliers,E021,4,False,test-s202-classic-with_paradata,rule-based,-,-,with_paradata,202
+outliers,E022,2,False,test-s202-classic-with_paradata,rule-based,-,-,with_paradata,202
+outliers,E023,1,False,test-s202-classic-with_paradata,rule-based,-,-,with_paradata,202
+outliers,E024,1,False,test-s202-classic-with_paradata,rule-based,-,-,with_paradata,202
+outliers,E027,1,False,test-s202-classic-with_paradata,rule-based,-,-,with_paradata,202
+outliers,E030,2,False,test-s202-classic-with_paradata,rule-based,-,-,with_paradata,202
+straightlining,E006,1,True,test-s202-classic-with_paradata,rule-based,-,-,with_paradata,202
+timestamps,E011,22,True,test-s202-classic-with_paradata,rule-based,-,-,with_paradata,202
+timestamps,E013,38,True,test-s202-classic-with_paradata,rule-based,-,-,with_paradata,202
+duration,E003,1,False,test-s202-claude-opus-5-5-cc-S0_naive-content_only,language model,claude-opus-5-5-cc,S0_naive,content_only,202
+duration,E005,1,False,test-s202-claude-opus-5-5-cc-S0_naive-content_only,language model,claude-opus-5-5-cc,S0_naive,content_only,202
+duration,E008,3,False,test-s202-claude-opus-5-5-cc-S0_naive-content_only,language model,claude-opus-5-5-cc,S0_naive,content_only,202
+duration,E011,1,False,test-s202-claude-opus-5-5-cc-S0_naive-content_only,language model,claude-opus-5-5-cc,S0_naive,content_only,202
+duration,E022,1,False,test-s202-claude-opus-5-5-cc-S0_naive-content_only,language model,claude-opus-5-5-cc,S0_naive,content_only,202
+duration,E028,1,False,test-s202-claude-opus-5-5-cc-S0_naive-content_only,language model,claude-opus-5-5-cc,S0_naive,content_only,202
+heaping,E006,1,True,test-s202-claude-opus-5-5-cc-S0_naive-content_only,language model,claude-opus-5-5-cc,S0_naive,content_only,202
+heaping,E009,1,True,test-s202-claude-opus-5-5-cc-S0_naive-content_only,language model,claude-opus-5-5-cc,S0_naive,content_only,202
+heaping,E013,1,True,test-s202-claude-opus-5-5-cc-S0_naive-content_only,language model,claude-opus-5-5-cc,S0_naive,content_only,202
+nonresponse,E004,1,False,test-s202-claude-opus-5-5-cc-S0_naive-content_only,language model,claude-opus-5-5-cc,S0_naive,content_only,202
+nonresponse,E006,1,True,test-s202-claude-opus-5-5-cc-S0_naive-content_only,language model,claude-opus-5-5-cc,S0_naive,content_only,202
+nonresponse,E009,1,True,test-s202-claude-opus-5-5-cc-S0_naive-content_only,language model,claude-opus-5-5-cc,S0_naive,content_only,202
+outliers,E001,4,False,test-s202-claude-opus-5-5-cc-S0_naive-content_only,language model,claude-opus-5-5-cc,S0_naive,content_only,202
+outliers,E002,1,False,test-s202-claude-opus-5-5-cc-S0_naive-content_only,language model,claude-opus-5-5-cc,S0_naive,content_only,202
+outliers,E003,2,False,test-s202-claude-opus-5-5-cc-S0_naive-content_only,language model,claude-opus-5-5-cc,S0_naive,content_only,202
+outliers,E004,4,False,test-s202-claude-opus-5-5-cc-S0_naive-content_only,language model,claude-opus-5-5-cc,S0_naive,content_only,202
+outliers,E005,2,False,test-s202-claude-opus-5-5-cc-S0_naive-content_only,language model,claude-opus-5-5-cc,S0_naive,content_only,202
+outliers,E006,2,True,test-s202-claude-opus-5-5-cc-S0_naive-content_only,language model,claude-opus-5-5-cc,S0_naive,content_only,202
+outliers,E007,1,False,test-s202-claude-opus-5-5-cc-S0_naive-content_only,language model,claude-opus-5-5-cc,S0_naive,content_only,202
+outliers,E008,3,False,test-s202-claude-opus-5-5-cc-S0_naive-content_only,language model,claude-opus-5-5-cc,S0_naive,content_only,202
+outliers,E009,3,True,test-s202-claude-opus-5-5-cc-S0_naive-content_only,language model,claude-opus-5-5-cc,S0_naive,content_only,202
+outliers,E012,2,False,test-s202-claude-opus-5-5-cc-S0_naive-content_only,language model,claude-opus-5-5-cc,S0_naive,content_only,202
+outliers,E013,2,True,test-s202-claude-opus-5-5-cc-S0_naive-content_only,language model,claude-opus-5-5-cc,S0_naive,content_only,202
+outliers,E014,4,False,test-s202-claude-opus-5-5-cc-S0_naive-content_only,language model,claude-opus-5-5-cc,S0_naive,content_only,202
+outliers,E015,1,False,test-s202-claude-opus-5-5-cc-S0_naive-content_only,language model,claude-opus-5-5-cc,S0_naive,content_only,202
+outliers,E016,5,False,test-s202-claude-opus-5-5-cc-S0_naive-content_only,language model,claude-opus-5-5-cc,S0_naive,content_only,202
+outliers,E017,3,False,test-s202-claude-opus-5-5-cc-S0_naive-content_only,language model,claude-opus-5-5-cc,S0_naive,content_only,202
+outliers,E018,1,False,test-s202-claude-opus-5-5-cc-S0_naive-content_only,language model,claude-opus-5-5-cc,S0_naive,content_only,202
+outliers,E019,2,False,test-s202-claude-opus-5-5-cc-S0_naive-content_only,language model,claude-opus-5-5-cc,S0_naive,content_only,202
+outliers,E020,1,False,test-s202-claude-opus-5-5-cc-S0_naive-content_only,language model,claude-opus-5-5-cc,S0_naive,content_only,202
+outliers,E021,3,False,test-s202-claude-opus-5-5-cc-S0_naive-content_only,language model,claude-opus-5-5-cc,S0_naive,content_only,202
+outliers,E022,2,False,test-s202-claude-opus-5-5-cc-S0_naive-content_only,language model,claude-opus-5-5-cc,S0_naive,content_only,202
+outliers,E023,3,False,test-s202-claude-opus-5-5-cc-S0_naive-content_only,language model,claude-opus-5-5-cc,S0_naive,content_only,202
+outliers,E024,1,False,test-s202-claude-opus-5-5-cc-S0_naive-content_only,language model,claude-opus-5-5-cc,S0_naive,content_only,202
+outliers,E026,3,False,test-s202-claude-opus-5-5-cc-S0_naive-content_only,language model,claude-opus-5-5-cc,S0_naive,content_only,202
+outliers,E027,1,False,test-s202-claude-opus-5-5-cc-S0_naive-content_only,language model,claude-opus-5-5-cc,S0_naive,content_only,202
+outliers,E028,3,False,test-s202-claude-opus-5-5-cc-S0_naive-content_only,language model,claude-opus-5-5-cc,S0_naive,content_only,202
+outliers,E030,1,False,test-s202-claude-opus-5-5-cc-S0_naive-content_only,language model,claude-opus-5-5-cc,S0_naive,content_only,202
+duration,E003,1,False,test-s202-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,202
+duration,E005,1,False,test-s202-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,202
+duration,E006,19,True,test-s202-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,202
+duration,E008,1,False,test-s202-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,202
+duration,E009,12,True,test-s202-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,202
+duration,E011,1,False,test-s202-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,202
+duration,E013,15,True,test-s202-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,202
+duration,E022,1,False,test-s202-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,202
+duration,E028,1,False,test-s202-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,202
+enumerator_risk,E006,1,True,test-s202-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,202
+enumerator_risk,E009,1,True,test-s202-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,202
+enumerator_risk,E013,1,True,test-s202-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,202
+gps,E006,18,True,test-s202-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,202
+gps,E009,14,True,test-s202-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,202
+gps,E013,22,True,test-s202-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,202
+heaping,E006,1,True,test-s202-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,202
+heaping,E009,1,True,test-s202-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,202
+heaping,E013,1,True,test-s202-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,202
+nonresponse,E004,1,False,test-s202-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,202
+nonresponse,E006,1,True,test-s202-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,202
+nonresponse,E009,1,True,test-s202-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,202
+outliers,E001,4,False,test-s202-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,202
+outliers,E002,1,False,test-s202-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,202
+outliers,E003,2,False,test-s202-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,202
+outliers,E004,4,False,test-s202-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,202
+outliers,E005,2,False,test-s202-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,202
+outliers,E006,2,True,test-s202-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,202
+outliers,E007,1,False,test-s202-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,202
+outliers,E008,3,False,test-s202-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,202
+outliers,E009,3,True,test-s202-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,202
+outliers,E012,2,False,test-s202-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,202
+outliers,E013,2,True,test-s202-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,202
+outliers,E014,4,False,test-s202-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,202
+outliers,E015,1,False,test-s202-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,202
+outliers,E016,5,False,test-s202-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,202
+outliers,E017,3,False,test-s202-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,202
+outliers,E018,1,False,test-s202-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,202
+outliers,E019,2,False,test-s202-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,202
+outliers,E020,1,False,test-s202-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,202
+outliers,E021,3,False,test-s202-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,202
+outliers,E022,2,False,test-s202-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,202
+outliers,E023,3,False,test-s202-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,202
+outliers,E024,1,False,test-s202-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,202
+outliers,E026,3,False,test-s202-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,202
+outliers,E027,1,False,test-s202-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,202
+outliers,E028,3,False,test-s202-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,202
+outliers,E030,1,False,test-s202-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,202
+timestamps,E006,11,True,test-s202-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,202
+timestamps,E009,10,True,test-s202-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,202
+timestamps,E013,10,True,test-s202-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,202
+duration,E003,1,False,test-s202-claude-opus-5-5-cc-S1_informed-content_only,language model,claude-opus-5-5-cc,S1_informed,content_only,202
+duration,E005,1,False,test-s202-claude-opus-5-5-cc-S1_informed-content_only,language model,claude-opus-5-5-cc,S1_informed,content_only,202
+duration,E008,3,False,test-s202-claude-opus-5-5-cc-S1_informed-content_only,language model,claude-opus-5-5-cc,S1_informed,content_only,202
+duration,E011,1,False,test-s202-claude-opus-5-5-cc-S1_informed-content_only,language model,claude-opus-5-5-cc,S1_informed,content_only,202
+duration,E022,1,False,test-s202-claude-opus-5-5-cc-S1_informed-content_only,language model,claude-opus-5-5-cc,S1_informed,content_only,202
+duration,E028,1,False,test-s202-claude-opus-5-5-cc-S1_informed-content_only,language model,claude-opus-5-5-cc,S1_informed,content_only,202
+nonresponse,E004,1,False,test-s202-claude-opus-5-5-cc-S1_informed-content_only,language model,claude-opus-5-5-cc,S1_informed,content_only,202
+outliers,E001,4,False,test-s202-claude-opus-5-5-cc-S1_informed-content_only,language model,claude-opus-5-5-cc,S1_informed,content_only,202
+outliers,E002,1,False,test-s202-claude-opus-5-5-cc-S1_informed-content_only,language model,claude-opus-5-5-cc,S1_informed,content_only,202
+outliers,E003,2,False,test-s202-claude-opus-5-5-cc-S1_informed-content_only,language model,claude-opus-5-5-cc,S1_informed,content_only,202
+outliers,E004,4,False,test-s202-claude-opus-5-5-cc-S1_informed-content_only,language model,claude-opus-5-5-cc,S1_informed,content_only,202
+outliers,E005,2,False,test-s202-claude-opus-5-5-cc-S1_informed-content_only,language model,claude-opus-5-5-cc,S1_informed,content_only,202
+outliers,E006,1,True,test-s202-claude-opus-5-5-cc-S1_informed-content_only,language model,claude-opus-5-5-cc,S1_informed,content_only,202
+outliers,E007,1,False,test-s202-claude-opus-5-5-cc-S1_informed-content_only,language model,claude-opus-5-5-cc,S1_informed,content_only,202
+outliers,E008,3,False,test-s202-claude-opus-5-5-cc-S1_informed-content_only,language model,claude-opus-5-5-cc,S1_informed,content_only,202
+outliers,E009,1,True,test-s202-claude-opus-5-5-cc-S1_informed-content_only,language model,claude-opus-5-5-cc,S1_informed,content_only,202
+outliers,E012,2,False,test-s202-claude-opus-5-5-cc-S1_informed-content_only,language model,claude-opus-5-5-cc,S1_informed,content_only,202
+outliers,E013,1,True,test-s202-claude-opus-5-5-cc-S1_informed-content_only,language model,claude-opus-5-5-cc,S1_informed,content_only,202
+outliers,E014,4,False,test-s202-claude-opus-5-5-cc-S1_informed-content_only,language model,claude-opus-5-5-cc,S1_informed,content_only,202
+outliers,E015,1,False,test-s202-claude-opus-5-5-cc-S1_informed-content_only,language model,claude-opus-5-5-cc,S1_informed,content_only,202
+outliers,E016,5,False,test-s202-claude-opus-5-5-cc-S1_informed-content_only,language model,claude-opus-5-5-cc,S1_informed,content_only,202
+outliers,E017,3,False,test-s202-claude-opus-5-5-cc-S1_informed-content_only,language model,claude-opus-5-5-cc,S1_informed,content_only,202
+outliers,E018,1,False,test-s202-claude-opus-5-5-cc-S1_informed-content_only,language model,claude-opus-5-5-cc,S1_informed,content_only,202
+outliers,E019,2,False,test-s202-claude-opus-5-5-cc-S1_informed-content_only,language model,claude-opus-5-5-cc,S1_informed,content_only,202
+outliers,E020,1,False,test-s202-claude-opus-5-5-cc-S1_informed-content_only,language model,claude-opus-5-5-cc,S1_informed,content_only,202
+outliers,E021,3,False,test-s202-claude-opus-5-5-cc-S1_informed-content_only,language model,claude-opus-5-5-cc,S1_informed,content_only,202
+outliers,E022,2,False,test-s202-claude-opus-5-5-cc-S1_informed-content_only,language model,claude-opus-5-5-cc,S1_informed,content_only,202
+outliers,E023,3,False,test-s202-claude-opus-5-5-cc-S1_informed-content_only,language model,claude-opus-5-5-cc,S1_informed,content_only,202
+outliers,E024,1,False,test-s202-claude-opus-5-5-cc-S1_informed-content_only,language model,claude-opus-5-5-cc,S1_informed,content_only,202
+outliers,E026,3,False,test-s202-claude-opus-5-5-cc-S1_informed-content_only,language model,claude-opus-5-5-cc,S1_informed,content_only,202
+outliers,E027,1,False,test-s202-claude-opus-5-5-cc-S1_informed-content_only,language model,claude-opus-5-5-cc,S1_informed,content_only,202
+outliers,E028,3,False,test-s202-claude-opus-5-5-cc-S1_informed-content_only,language model,claude-opus-5-5-cc,S1_informed,content_only,202
+outliers,E030,1,False,test-s202-claude-opus-5-5-cc-S1_informed-content_only,language model,claude-opus-5-5-cc,S1_informed,content_only,202
+duration,E003,1,False,test-s202-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,202
+duration,E005,1,False,test-s202-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,202
+duration,E006,18,True,test-s202-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,202
+duration,E008,1,False,test-s202-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,202
+duration,E009,13,True,test-s202-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,202
+duration,E011,1,False,test-s202-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,202
+duration,E013,16,True,test-s202-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,202
+duration,E022,1,False,test-s202-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,202
+duration,E028,1,False,test-s202-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,202
+enumerator_risk,E006,1,True,test-s202-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,202
+enumerator_risk,E009,1,True,test-s202-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,202
+enumerator_risk,E013,1,True,test-s202-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,202
+gps,E006,18,True,test-s202-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,202
+gps,E009,10,True,test-s202-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,202
+gps,E013,19,True,test-s202-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,202
+nonresponse,E004,1,False,test-s202-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,202
+outliers,E001,4,False,test-s202-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,202
+outliers,E002,1,False,test-s202-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,202
+outliers,E003,2,False,test-s202-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,202
+outliers,E004,4,False,test-s202-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,202
+outliers,E005,2,False,test-s202-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,202
+outliers,E006,1,True,test-s202-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,202
+outliers,E007,1,False,test-s202-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,202
+outliers,E008,3,False,test-s202-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,202
+outliers,E009,1,True,test-s202-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,202
+outliers,E012,2,False,test-s202-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,202
+outliers,E013,1,True,test-s202-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,202
+outliers,E014,4,False,test-s202-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,202
+outliers,E015,1,False,test-s202-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,202
+outliers,E016,5,False,test-s202-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,202
+outliers,E017,3,False,test-s202-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,202
+outliers,E018,1,False,test-s202-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,202
+outliers,E019,2,False,test-s202-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,202
+outliers,E020,1,False,test-s202-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,202
+outliers,E021,3,False,test-s202-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,202
+outliers,E022,2,False,test-s202-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,202
+outliers,E023,3,False,test-s202-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,202
+outliers,E024,1,False,test-s202-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,202
+outliers,E026,3,False,test-s202-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,202
+outliers,E027,1,False,test-s202-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,202
+outliers,E028,3,False,test-s202-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,202
+outliers,E030,1,False,test-s202-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,202
+timestamps,E006,23,True,test-s202-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,202
+timestamps,E009,13,True,test-s202-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,202
+timestamps,E013,15,True,test-s202-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,202
+duration,E003,1,False,test-s202-claude-opus-5-5-cc-S2_careful-content_only,language model,claude-opus-5-5-cc,S2_careful,content_only,202
+duration,E005,1,False,test-s202-claude-opus-5-5-cc-S2_careful-content_only,language model,claude-opus-5-5-cc,S2_careful,content_only,202
+duration,E008,3,False,test-s202-claude-opus-5-5-cc-S2_careful-content_only,language model,claude-opus-5-5-cc,S2_careful,content_only,202
+duration,E011,1,False,test-s202-claude-opus-5-5-cc-S2_careful-content_only,language model,claude-opus-5-5-cc,S2_careful,content_only,202
+duration,E022,1,False,test-s202-claude-opus-5-5-cc-S2_careful-content_only,language model,claude-opus-5-5-cc,S2_careful,content_only,202
+duration,E028,1,False,test-s202-claude-opus-5-5-cc-S2_careful-content_only,language model,claude-opus-5-5-cc,S2_careful,content_only,202
+heaping,E006,1,True,test-s202-claude-opus-5-5-cc-S2_careful-content_only,language model,claude-opus-5-5-cc,S2_careful,content_only,202
+heaping,E009,1,True,test-s202-claude-opus-5-5-cc-S2_careful-content_only,language model,claude-opus-5-5-cc,S2_careful,content_only,202
+heaping,E013,1,True,test-s202-claude-opus-5-5-cc-S2_careful-content_only,language model,claude-opus-5-5-cc,S2_careful,content_only,202
+nonresponse,E004,1,False,test-s202-claude-opus-5-5-cc-S2_careful-content_only,language model,claude-opus-5-5-cc,S2_careful,content_only,202
+outliers,E001,4,False,test-s202-claude-opus-5-5-cc-S2_careful-content_only,language model,claude-opus-5-5-cc,S2_careful,content_only,202
+outliers,E002,1,False,test-s202-claude-opus-5-5-cc-S2_careful-content_only,language model,claude-opus-5-5-cc,S2_careful,content_only,202
+outliers,E003,2,False,test-s202-claude-opus-5-5-cc-S2_careful-content_only,language model,claude-opus-5-5-cc,S2_careful,content_only,202
+outliers,E004,4,False,test-s202-claude-opus-5-5-cc-S2_careful-content_only,language model,claude-opus-5-5-cc,S2_careful,content_only,202
+outliers,E005,2,False,test-s202-claude-opus-5-5-cc-S2_careful-content_only,language model,claude-opus-5-5-cc,S2_careful,content_only,202
+outliers,E006,1,True,test-s202-claude-opus-5-5-cc-S2_careful-content_only,language model,claude-opus-5-5-cc,S2_careful,content_only,202
+outliers,E007,1,False,test-s202-claude-opus-5-5-cc-S2_careful-content_only,language model,claude-opus-5-5-cc,S2_careful,content_only,202
+outliers,E008,3,False,test-s202-claude-opus-5-5-cc-S2_careful-content_only,language model,claude-opus-5-5-cc,S2_careful,content_only,202
+outliers,E009,1,True,test-s202-claude-opus-5-5-cc-S2_careful-content_only,language model,claude-opus-5-5-cc,S2_careful,content_only,202
+outliers,E012,2,False,test-s202-claude-opus-5-5-cc-S2_careful-content_only,language model,claude-opus-5-5-cc,S2_careful,content_only,202
+outliers,E013,1,True,test-s202-claude-opus-5-5-cc-S2_careful-content_only,language model,claude-opus-5-5-cc,S2_careful,content_only,202
+outliers,E014,4,False,test-s202-claude-opus-5-5-cc-S2_careful-content_only,language model,claude-opus-5-5-cc,S2_careful,content_only,202
+outliers,E015,1,False,test-s202-claude-opus-5-5-cc-S2_careful-content_only,language model,claude-opus-5-5-cc,S2_careful,content_only,202
+outliers,E016,5,False,test-s202-claude-opus-5-5-cc-S2_careful-content_only,language model,claude-opus-5-5-cc,S2_careful,content_only,202
+outliers,E017,3,False,test-s202-claude-opus-5-5-cc-S2_careful-content_only,language model,claude-opus-5-5-cc,S2_careful,content_only,202
+outliers,E018,1,False,test-s202-claude-opus-5-5-cc-S2_careful-content_only,language model,claude-opus-5-5-cc,S2_careful,content_only,202
+outliers,E019,2,False,test-s202-claude-opus-5-5-cc-S2_careful-content_only,language model,claude-opus-5-5-cc,S2_careful,content_only,202
+outliers,E020,1,False,test-s202-claude-opus-5-5-cc-S2_careful-content_only,language model,claude-opus-5-5-cc,S2_careful,content_only,202
+outliers,E021,3,False,test-s202-claude-opus-5-5-cc-S2_careful-content_only,language model,claude-opus-5-5-cc,S2_careful,content_only,202
+outliers,E022,2,False,test-s202-claude-opus-5-5-cc-S2_careful-content_only,language model,claude-opus-5-5-cc,S2_careful,content_only,202
+outliers,E023,3,False,test-s202-claude-opus-5-5-cc-S2_careful-content_only,language model,claude-opus-5-5-cc,S2_careful,content_only,202
+outliers,E024,1,False,test-s202-claude-opus-5-5-cc-S2_careful-content_only,language model,claude-opus-5-5-cc,S2_careful,content_only,202
+outliers,E026,3,False,test-s202-claude-opus-5-5-cc-S2_careful-content_only,language model,claude-opus-5-5-cc,S2_careful,content_only,202
+outliers,E027,1,False,test-s202-claude-opus-5-5-cc-S2_careful-content_only,language model,claude-opus-5-5-cc,S2_careful,content_only,202
+outliers,E028,3,False,test-s202-claude-opus-5-5-cc-S2_careful-content_only,language model,claude-opus-5-5-cc,S2_careful,content_only,202
+outliers,E030,1,False,test-s202-claude-opus-5-5-cc-S2_careful-content_only,language model,claude-opus-5-5-cc,S2_careful,content_only,202
+duration,E003,1,False,test-s202-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,202
+duration,E005,1,False,test-s202-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,202
+duration,E006,20,True,test-s202-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,202
+duration,E008,1,False,test-s202-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,202
+duration,E009,13,True,test-s202-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,202
+duration,E011,1,False,test-s202-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,202
+duration,E013,16,True,test-s202-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,202
+duration,E022,1,False,test-s202-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,202
+duration,E028,1,False,test-s202-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,202
+enumerator_risk,E006,1,True,test-s202-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,202
+enumerator_risk,E009,1,True,test-s202-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,202
+enumerator_risk,E013,1,True,test-s202-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,202
+gps,E005,1,False,test-s202-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,202
+gps,E006,18,True,test-s202-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,202
+gps,E009,12,True,test-s202-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,202
+gps,E013,27,True,test-s202-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,202
+heaping,E006,1,True,test-s202-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,202
+heaping,E009,1,True,test-s202-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,202
+heaping,E013,1,True,test-s202-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,202
+nonresponse,E004,1,False,test-s202-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,202
+outliers,E001,4,False,test-s202-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,202
+outliers,E002,1,False,test-s202-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,202
+outliers,E003,2,False,test-s202-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,202
+outliers,E004,4,False,test-s202-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,202
+outliers,E005,2,False,test-s202-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,202
+outliers,E006,1,True,test-s202-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,202
+outliers,E007,1,False,test-s202-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,202
+outliers,E008,3,False,test-s202-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,202
+outliers,E009,1,True,test-s202-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,202
+outliers,E012,2,False,test-s202-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,202
+outliers,E013,1,True,test-s202-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,202
+outliers,E014,4,False,test-s202-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,202
+outliers,E015,1,False,test-s202-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,202
+outliers,E016,5,False,test-s202-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,202
+outliers,E017,3,False,test-s202-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,202
+outliers,E018,1,False,test-s202-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,202
+outliers,E019,2,False,test-s202-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,202
+outliers,E020,1,False,test-s202-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,202
+outliers,E021,3,False,test-s202-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,202
+outliers,E022,2,False,test-s202-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,202
+outliers,E023,3,False,test-s202-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,202
+outliers,E024,1,False,test-s202-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,202
+outliers,E026,3,False,test-s202-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,202
+outliers,E027,1,False,test-s202-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,202
+outliers,E028,3,False,test-s202-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,202
+outliers,E030,1,False,test-s202-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,202
+timestamps,E006,14,True,test-s202-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,202
+timestamps,E009,21,True,test-s202-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,202
+timestamps,E013,17,True,test-s202-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,202
+benford,E009,1,True,test-s203-classic-content_only,rule-based,-,-,content_only,203
+benford,E023,1,True,test-s203-classic-content_only,rule-based,-,-,content_only,203
+benford,E029,1,True,test-s203-classic-content_only,rule-based,-,-,content_only,203
+duration,E003,2,False,test-s203-classic-content_only,rule-based,-,-,content_only,203
+duration,E004,1,False,test-s203-classic-content_only,rule-based,-,-,content_only,203
+duration,E009,1,True,test-s203-classic-content_only,rule-based,-,-,content_only,203
+duration,E011,2,False,test-s203-classic-content_only,rule-based,-,-,content_only,203
+duration,E015,1,False,test-s203-classic-content_only,rule-based,-,-,content_only,203
+duration,E019,2,False,test-s203-classic-content_only,rule-based,-,-,content_only,203
+duration,E020,1,False,test-s203-classic-content_only,rule-based,-,-,content_only,203
+duration,E028,1,False,test-s203-classic-content_only,rule-based,-,-,content_only,203
+enumerator_effects,E009,1,True,test-s203-classic-content_only,rule-based,-,-,content_only,203
+enumerator_effects,E023,1,True,test-s203-classic-content_only,rule-based,-,-,content_only,203
+enumerator_risk,E009,1,True,test-s203-classic-content_only,rule-based,-,-,content_only,203
+enumerator_risk,E023,1,True,test-s203-classic-content_only,rule-based,-,-,content_only,203
+heaping,E009,1,True,test-s203-classic-content_only,rule-based,-,-,content_only,203
+heaping,E023,1,True,test-s203-classic-content_only,rule-based,-,-,content_only,203
+heaping,E029,1,True,test-s203-classic-content_only,rule-based,-,-,content_only,203
+nonresponse,E013,1,False,test-s203-classic-content_only,rule-based,-,-,content_only,203
+outliers,E001,2,False,test-s203-classic-content_only,rule-based,-,-,content_only,203
+outliers,E002,2,False,test-s203-classic-content_only,rule-based,-,-,content_only,203
+outliers,E003,6,False,test-s203-classic-content_only,rule-based,-,-,content_only,203
+outliers,E004,2,False,test-s203-classic-content_only,rule-based,-,-,content_only,203
+outliers,E005,1,False,test-s203-classic-content_only,rule-based,-,-,content_only,203
+outliers,E006,1,False,test-s203-classic-content_only,rule-based,-,-,content_only,203
+outliers,E007,1,False,test-s203-classic-content_only,rule-based,-,-,content_only,203
+outliers,E008,1,False,test-s203-classic-content_only,rule-based,-,-,content_only,203
+outliers,E009,2,True,test-s203-classic-content_only,rule-based,-,-,content_only,203
+outliers,E010,2,False,test-s203-classic-content_only,rule-based,-,-,content_only,203
+outliers,E011,2,False,test-s203-classic-content_only,rule-based,-,-,content_only,203
+outliers,E012,4,False,test-s203-classic-content_only,rule-based,-,-,content_only,203
+outliers,E013,2,False,test-s203-classic-content_only,rule-based,-,-,content_only,203
+outliers,E014,3,False,test-s203-classic-content_only,rule-based,-,-,content_only,203
+outliers,E015,1,False,test-s203-classic-content_only,rule-based,-,-,content_only,203
+outliers,E017,4,False,test-s203-classic-content_only,rule-based,-,-,content_only,203
+outliers,E019,5,False,test-s203-classic-content_only,rule-based,-,-,content_only,203
+outliers,E020,2,False,test-s203-classic-content_only,rule-based,-,-,content_only,203
+outliers,E021,1,False,test-s203-classic-content_only,rule-based,-,-,content_only,203
+outliers,E022,4,False,test-s203-classic-content_only,rule-based,-,-,content_only,203
+outliers,E024,1,False,test-s203-classic-content_only,rule-based,-,-,content_only,203
+outliers,E025,1,False,test-s203-classic-content_only,rule-based,-,-,content_only,203
+outliers,E026,5,False,test-s203-classic-content_only,rule-based,-,-,content_only,203
+outliers,E027,4,False,test-s203-classic-content_only,rule-based,-,-,content_only,203
+outliers,E028,5,False,test-s203-classic-content_only,rule-based,-,-,content_only,203
+outliers,E029,2,True,test-s203-classic-content_only,rule-based,-,-,content_only,203
+outliers,E030,2,False,test-s203-classic-content_only,rule-based,-,-,content_only,203
+benford,E009,1,True,test-s203-classic-with_paradata,rule-based,-,-,with_paradata,203
+benford,E023,1,True,test-s203-classic-with_paradata,rule-based,-,-,with_paradata,203
+benford,E029,1,True,test-s203-classic-with_paradata,rule-based,-,-,with_paradata,203
+duration,E003,2,False,test-s203-classic-with_paradata,rule-based,-,-,with_paradata,203
+duration,E004,1,False,test-s203-classic-with_paradata,rule-based,-,-,with_paradata,203
+duration,E018,1,False,test-s203-classic-with_paradata,rule-based,-,-,with_paradata,203
+duration,E019,1,False,test-s203-classic-with_paradata,rule-based,-,-,with_paradata,203
+duration,E021,1,False,test-s203-classic-with_paradata,rule-based,-,-,with_paradata,203
+duration,E023,17,True,test-s203-classic-with_paradata,rule-based,-,-,with_paradata,203
+duration,E025,1,False,test-s203-classic-with_paradata,rule-based,-,-,with_paradata,203
+duration,E027,1,False,test-s203-classic-with_paradata,rule-based,-,-,with_paradata,203
+duration,E029,15,True,test-s203-classic-with_paradata,rule-based,-,-,with_paradata,203
+duration,E030,1,False,test-s203-classic-with_paradata,rule-based,-,-,with_paradata,203
+enumerator_effects,E009,1,True,test-s203-classic-with_paradata,rule-based,-,-,with_paradata,203
+enumerator_risk,E009,1,True,test-s203-classic-with_paradata,rule-based,-,-,with_paradata,203
+enumerator_risk,E023,1,True,test-s203-classic-with_paradata,rule-based,-,-,with_paradata,203
+enumerator_risk,E029,1,True,test-s203-classic-with_paradata,rule-based,-,-,with_paradata,203
+near_duplicates,E023,6,True,test-s203-classic-with_paradata,rule-based,-,-,with_paradata,203
+near_duplicates,E029,10,True,test-s203-classic-with_paradata,rule-based,-,-,with_paradata,203
+nonresponse,E005,1,False,test-s203-classic-with_paradata,rule-based,-,-,with_paradata,203
+outliers,E001,2,False,test-s203-classic-with_paradata,rule-based,-,-,with_paradata,203
+outliers,E002,3,False,test-s203-classic-with_paradata,rule-based,-,-,with_paradata,203
+outliers,E003,7,False,test-s203-classic-with_paradata,rule-based,-,-,with_paradata,203
+outliers,E004,2,False,test-s203-classic-with_paradata,rule-based,-,-,with_paradata,203
+outliers,E005,1,False,test-s203-classic-with_paradata,rule-based,-,-,with_paradata,203
+outliers,E006,2,False,test-s203-classic-with_paradata,rule-based,-,-,with_paradata,203
+outliers,E007,2,False,test-s203-classic-with_paradata,rule-based,-,-,with_paradata,203
+outliers,E008,1,False,test-s203-classic-with_paradata,rule-based,-,-,with_paradata,203
+outliers,E010,1,False,test-s203-classic-with_paradata,rule-based,-,-,with_paradata,203
+outliers,E011,2,False,test-s203-classic-with_paradata,rule-based,-,-,with_paradata,203
+outliers,E012,3,False,test-s203-classic-with_paradata,rule-based,-,-,with_paradata,203
+outliers,E013,4,False,test-s203-classic-with_paradata,rule-based,-,-,with_paradata,203
+outliers,E014,6,False,test-s203-classic-with_paradata,rule-based,-,-,with_paradata,203
+outliers,E015,1,False,test-s203-classic-with_paradata,rule-based,-,-,with_paradata,203
+outliers,E016,4,False,test-s203-classic-with_paradata,rule-based,-,-,with_paradata,203
+outliers,E018,4,False,test-s203-classic-with_paradata,rule-based,-,-,with_paradata,203
+outliers,E019,3,False,test-s203-classic-with_paradata,rule-based,-,-,with_paradata,203
+outliers,E020,1,False,test-s203-classic-with_paradata,rule-based,-,-,with_paradata,203
+outliers,E021,3,False,test-s203-classic-with_paradata,rule-based,-,-,with_paradata,203
+outliers,E022,1,False,test-s203-classic-with_paradata,rule-based,-,-,with_paradata,203
+outliers,E024,2,False,test-s203-classic-with_paradata,rule-based,-,-,with_paradata,203
+outliers,E025,3,False,test-s203-classic-with_paradata,rule-based,-,-,with_paradata,203
+outliers,E026,2,False,test-s203-classic-with_paradata,rule-based,-,-,with_paradata,203
+outliers,E027,1,False,test-s203-classic-with_paradata,rule-based,-,-,with_paradata,203
+outliers,E029,4,True,test-s203-classic-with_paradata,rule-based,-,-,with_paradata,203
+outliers,E030,2,False,test-s203-classic-with_paradata,rule-based,-,-,with_paradata,203
+timestamps,E009,32,True,test-s203-classic-with_paradata,rule-based,-,-,with_paradata,203
+timestamps,E029,39,True,test-s203-classic-with_paradata,rule-based,-,-,with_paradata,203
+duration,E002,1,False,test-s203-claude-opus-5-5-cc-S0_naive-content_only,language model,claude-opus-5-5-cc,S0_naive,content_only,203
+duration,E003,1,False,test-s203-claude-opus-5-5-cc-S0_naive-content_only,language model,claude-opus-5-5-cc,S0_naive,content_only,203
+duration,E004,1,False,test-s203-claude-opus-5-5-cc-S0_naive-content_only,language model,claude-opus-5-5-cc,S0_naive,content_only,203
+duration,E009,1,False,test-s203-claude-opus-5-5-cc-S0_naive-content_only,language model,claude-opus-5-5-cc,S0_naive,content_only,203
+duration,E012,1,False,test-s203-claude-opus-5-5-cc-S0_naive-content_only,language model,claude-opus-5-5-cc,S0_naive,content_only,203
+duration,E013,3,False,test-s203-claude-opus-5-5-cc-S0_naive-content_only,language model,claude-opus-5-5-cc,S0_naive,content_only,203
+duration,E017,1,False,test-s203-claude-opus-5-5-cc-S0_naive-content_only,language model,claude-opus-5-5-cc,S0_naive,content_only,203
+duration,E020,1,False,test-s203-claude-opus-5-5-cc-S0_naive-content_only,language model,claude-opus-5-5-cc,S0_naive,content_only,203
+duration,E023,2,False,test-s203-claude-opus-5-5-cc-S0_naive-content_only,language model,claude-opus-5-5-cc,S0_naive,content_only,203
+duration,E029,1,False,test-s203-claude-opus-5-5-cc-S0_naive-content_only,language model,claude-opus-5-5-cc,S0_naive,content_only,203
+nonresponse,E022,1,True,test-s203-claude-opus-5-5-cc-S0_naive-content_only,language model,claude-opus-5-5-cc,S0_naive,content_only,203
+outliers,E001,1,False,test-s203-claude-opus-5-5-cc-S0_naive-content_only,language model,claude-opus-5-5-cc,S0_naive,content_only,203
+outliers,E002,1,False,test-s203-claude-opus-5-5-cc-S0_naive-content_only,language model,claude-opus-5-5-cc,S0_naive,content_only,203
+outliers,E003,2,False,test-s203-claude-opus-5-5-cc-S0_naive-content_only,language model,claude-opus-5-5-cc,S0_naive,content_only,203
+outliers,E004,4,False,test-s203-claude-opus-5-5-cc-S0_naive-content_only,language model,claude-opus-5-5-cc,S0_naive,content_only,203
+outliers,E005,4,False,test-s203-claude-opus-5-5-cc-S0_naive-content_only,language model,claude-opus-5-5-cc,S0_naive,content_only,203
+outliers,E006,2,True,test-s203-claude-opus-5-5-cc-S0_naive-content_only,language model,claude-opus-5-5-cc,S0_naive,content_only,203
+outliers,E007,2,False,test-s203-claude-opus-5-5-cc-S0_naive-content_only,language model,claude-opus-5-5-cc,S0_naive,content_only,203
+outliers,E008,1,True,test-s203-claude-opus-5-5-cc-S0_naive-content_only,language model,claude-opus-5-5-cc,S0_naive,content_only,203
+outliers,E009,1,False,test-s203-claude-opus-5-5-cc-S0_naive-content_only,language model,claude-opus-5-5-cc,S0_naive,content_only,203
+outliers,E011,4,False,test-s203-claude-opus-5-5-cc-S0_naive-content_only,language model,claude-opus-5-5-cc,S0_naive,content_only,203
+outliers,E012,2,False,test-s203-claude-opus-5-5-cc-S0_naive-content_only,language model,claude-opus-5-5-cc,S0_naive,content_only,203
+outliers,E013,2,False,test-s203-claude-opus-5-5-cc-S0_naive-content_only,language model,claude-opus-5-5-cc,S0_naive,content_only,203
+outliers,E014,1,False,test-s203-claude-opus-5-5-cc-S0_naive-content_only,language model,claude-opus-5-5-cc,S0_naive,content_only,203
+outliers,E015,3,False,test-s203-claude-opus-5-5-cc-S0_naive-content_only,language model,claude-opus-5-5-cc,S0_naive,content_only,203
+outliers,E017,1,False,test-s203-claude-opus-5-5-cc-S0_naive-content_only,language model,claude-opus-5-5-cc,S0_naive,content_only,203
+outliers,E018,1,False,test-s203-claude-opus-5-5-cc-S0_naive-content_only,language model,claude-opus-5-5-cc,S0_naive,content_only,203
+outliers,E019,3,False,test-s203-claude-opus-5-5-cc-S0_naive-content_only,language model,claude-opus-5-5-cc,S0_naive,content_only,203
+outliers,E021,5,False,test-s203-claude-opus-5-5-cc-S0_naive-content_only,language model,claude-opus-5-5-cc,S0_naive,content_only,203
+outliers,E022,1,True,test-s203-claude-opus-5-5-cc-S0_naive-content_only,language model,claude-opus-5-5-cc,S0_naive,content_only,203
+outliers,E023,3,False,test-s203-claude-opus-5-5-cc-S0_naive-content_only,language model,claude-opus-5-5-cc,S0_naive,content_only,203
+outliers,E024,3,False,test-s203-claude-opus-5-5-cc-S0_naive-content_only,language model,claude-opus-5-5-cc,S0_naive,content_only,203
+outliers,E025,1,False,test-s203-claude-opus-5-5-cc-S0_naive-content_only,language model,claude-opus-5-5-cc,S0_naive,content_only,203
+outliers,E026,2,False,test-s203-claude-opus-5-5-cc-S0_naive-content_only,language model,claude-opus-5-5-cc,S0_naive,content_only,203
+outliers,E027,1,False,test-s203-claude-opus-5-5-cc-S0_naive-content_only,language model,claude-opus-5-5-cc,S0_naive,content_only,203
+outliers,E028,1,False,test-s203-claude-opus-5-5-cc-S0_naive-content_only,language model,claude-opus-5-5-cc,S0_naive,content_only,203
+outliers,E029,1,False,test-s203-claude-opus-5-5-cc-S0_naive-content_only,language model,claude-opus-5-5-cc,S0_naive,content_only,203
+duration,E002,1,False,test-s203-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,203
+duration,E003,1,False,test-s203-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,203
+duration,E004,1,False,test-s203-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,203
+duration,E006,16,True,test-s203-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,203
+duration,E008,22,True,test-s203-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,203
+duration,E009,1,False,test-s203-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,203
+duration,E012,1,False,test-s203-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,203
+duration,E013,3,False,test-s203-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,203
+duration,E017,1,False,test-s203-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,203
+duration,E020,1,False,test-s203-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,203
+duration,E022,17,True,test-s203-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,203
+duration,E023,2,False,test-s203-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,203
+duration,E029,1,False,test-s203-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,203
+enumerator_risk,E006,1,True,test-s203-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,203
+enumerator_risk,E008,1,True,test-s203-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,203
+enumerator_risk,E022,1,True,test-s203-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,203
+gps,E006,18,True,test-s203-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,203
+gps,E008,19,True,test-s203-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,203
+gps,E022,20,True,test-s203-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,203
+nonresponse,E022,1,True,test-s203-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,203
+outliers,E001,1,False,test-s203-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,203
+outliers,E002,1,False,test-s203-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,203
+outliers,E003,2,False,test-s203-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,203
+outliers,E004,4,False,test-s203-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,203
+outliers,E005,4,False,test-s203-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,203
+outliers,E006,2,True,test-s203-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,203
+outliers,E007,2,False,test-s203-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,203
+outliers,E008,1,True,test-s203-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,203
+outliers,E009,1,False,test-s203-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,203
+outliers,E011,4,False,test-s203-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,203
+outliers,E012,2,False,test-s203-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,203
+outliers,E013,2,False,test-s203-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,203
+outliers,E014,1,False,test-s203-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,203
+outliers,E015,3,False,test-s203-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,203
+outliers,E017,1,False,test-s203-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,203
+outliers,E018,1,False,test-s203-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,203
+outliers,E019,3,False,test-s203-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,203
+outliers,E021,5,False,test-s203-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,203
+outliers,E022,1,True,test-s203-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,203
+outliers,E023,3,False,test-s203-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,203
+outliers,E024,3,False,test-s203-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,203
+outliers,E025,1,False,test-s203-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,203
+outliers,E026,2,False,test-s203-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,203
+outliers,E027,1,False,test-s203-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,203
+outliers,E028,1,False,test-s203-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,203
+outliers,E029,1,False,test-s203-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,203
+timestamps,E006,7,True,test-s203-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,203
+timestamps,E008,13,True,test-s203-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,203
+timestamps,E022,14,True,test-s203-claude-opus-5-5-cc-S0_naive-with_paradata,language model,claude-opus-5-5-cc,S0_naive,with_paradata,203
+duration,E002,1,False,test-s203-claude-opus-5-5-cc-S1_informed-content_only,language model,claude-opus-5-5-cc,S1_informed,content_only,203
+duration,E003,1,False,test-s203-claude-opus-5-5-cc-S1_informed-content_only,language model,claude-opus-5-5-cc,S1_informed,content_only,203
+duration,E004,1,False,test-s203-claude-opus-5-5-cc-S1_informed-content_only,language model,claude-opus-5-5-cc,S1_informed,content_only,203
+duration,E009,1,False,test-s203-claude-opus-5-5-cc-S1_informed-content_only,language model,claude-opus-5-5-cc,S1_informed,content_only,203
+duration,E012,1,False,test-s203-claude-opus-5-5-cc-S1_informed-content_only,language model,claude-opus-5-5-cc,S1_informed,content_only,203
+duration,E013,3,False,test-s203-claude-opus-5-5-cc-S1_informed-content_only,language model,claude-opus-5-5-cc,S1_informed,content_only,203
+duration,E017,1,False,test-s203-claude-opus-5-5-cc-S1_informed-content_only,language model,claude-opus-5-5-cc,S1_informed,content_only,203
+duration,E020,1,False,test-s203-claude-opus-5-5-cc-S1_informed-content_only,language model,claude-opus-5-5-cc,S1_informed,content_only,203
+duration,E023,2,False,test-s203-claude-opus-5-5-cc-S1_informed-content_only,language model,claude-opus-5-5-cc,S1_informed,content_only,203
+duration,E029,1,False,test-s203-claude-opus-5-5-cc-S1_informed-content_only,language model,claude-opus-5-5-cc,S1_informed,content_only,203
+heaping,E008,1,True,test-s203-claude-opus-5-5-cc-S1_informed-content_only,language model,claude-opus-5-5-cc,S1_informed,content_only,203
+outliers,E001,1,False,test-s203-claude-opus-5-5-cc-S1_informed-content_only,language model,claude-opus-5-5-cc,S1_informed,content_only,203
+outliers,E002,1,False,test-s203-claude-opus-5-5-cc-S1_informed-content_only,language model,claude-opus-5-5-cc,S1_informed,content_only,203
+outliers,E003,2,False,test-s203-claude-opus-5-5-cc-S1_informed-content_only,language model,claude-opus-5-5-cc,S1_informed,content_only,203
+outliers,E004,4,False,test-s203-claude-opus-5-5-cc-S1_informed-content_only,language model,claude-opus-5-5-cc,S1_informed,content_only,203
+outliers,E005,4,False,test-s203-claude-opus-5-5-cc-S1_informed-content_only,language model,claude-opus-5-5-cc,S1_informed,content_only,203
+outliers,E006,2,True,test-s203-claude-opus-5-5-cc-S1_informed-content_only,language model,claude-opus-5-5-cc,S1_informed,content_only,203
+outliers,E007,2,False,test-s203-claude-opus-5-5-cc-S1_informed-content_only,language model,claude-opus-5-5-cc,S1_informed,content_only,203
+outliers,E009,1,False,test-s203-claude-opus-5-5-cc-S1_informed-content_only,language model,claude-opus-5-5-cc,S1_informed,content_only,203
+outliers,E011,4,False,test-s203-claude-opus-5-5-cc-S1_informed-content_only,language model,claude-opus-5-5-cc,S1_informed,content_only,203
+outliers,E012,2,False,test-s203-claude-opus-5-5-cc-S1_informed-content_only,language model,claude-opus-5-5-cc,S1_informed,content_only,203
+outliers,E013,2,False,test-s203-claude-opus-5-5-cc-S1_informed-content_only,language model,claude-opus-5-5-cc,S1_informed,content_only,203
+outliers,E014,1,False,test-s203-claude-opus-5-5-cc-S1_informed-content_only,language model,claude-opus-5-5-cc,S1_informed,content_only,203
+outliers,E015,3,False,test-s203-claude-opus-5-5-cc-S1_informed-content_only,language model,claude-opus-5-5-cc,S1_informed,content_only,203
+outliers,E017,1,False,test-s203-claude-opus-5-5-cc-S1_informed-content_only,language model,claude-opus-5-5-cc,S1_informed,content_only,203
+outliers,E018,1,False,test-s203-claude-opus-5-5-cc-S1_informed-content_only,language model,claude-opus-5-5-cc,S1_informed,content_only,203
+outliers,E019,3,False,test-s203-claude-opus-5-5-cc-S1_informed-content_only,language model,claude-opus-5-5-cc,S1_informed,content_only,203
+outliers,E021,5,False,test-s203-claude-opus-5-5-cc-S1_informed-content_only,language model,claude-opus-5-5-cc,S1_informed,content_only,203
+outliers,E022,1,True,test-s203-claude-opus-5-5-cc-S1_informed-content_only,language model,claude-opus-5-5-cc,S1_informed,content_only,203
+outliers,E023,3,False,test-s203-claude-opus-5-5-cc-S1_informed-content_only,language model,claude-opus-5-5-cc,S1_informed,content_only,203
+outliers,E024,3,False,test-s203-claude-opus-5-5-cc-S1_informed-content_only,language model,claude-opus-5-5-cc,S1_informed,content_only,203
+outliers,E025,1,False,test-s203-claude-opus-5-5-cc-S1_informed-content_only,language model,claude-opus-5-5-cc,S1_informed,content_only,203
+outliers,E026,2,False,test-s203-claude-opus-5-5-cc-S1_informed-content_only,language model,claude-opus-5-5-cc,S1_informed,content_only,203
+outliers,E027,1,False,test-s203-claude-opus-5-5-cc-S1_informed-content_only,language model,claude-opus-5-5-cc,S1_informed,content_only,203
+outliers,E028,1,False,test-s203-claude-opus-5-5-cc-S1_informed-content_only,language model,claude-opus-5-5-cc,S1_informed,content_only,203
+outliers,E029,1,False,test-s203-claude-opus-5-5-cc-S1_informed-content_only,language model,claude-opus-5-5-cc,S1_informed,content_only,203
+duration,E002,1,False,test-s203-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,203
+duration,E003,1,False,test-s203-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,203
+duration,E004,1,False,test-s203-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,203
+duration,E006,15,True,test-s203-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,203
+duration,E008,21,True,test-s203-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,203
+duration,E009,1,False,test-s203-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,203
+duration,E012,1,False,test-s203-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,203
+duration,E013,3,False,test-s203-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,203
+duration,E017,1,False,test-s203-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,203
+duration,E020,1,False,test-s203-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,203
+duration,E022,17,True,test-s203-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,203
+duration,E023,2,False,test-s203-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,203
+duration,E029,1,False,test-s203-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,203
+enumerator_risk,E006,1,True,test-s203-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,203
+enumerator_risk,E008,1,True,test-s203-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,203
+enumerator_risk,E022,1,True,test-s203-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,203
+gps,E006,14,True,test-s203-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,203
+gps,E008,17,True,test-s203-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,203
+gps,E022,13,True,test-s203-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,203
+heaping,E008,1,True,test-s203-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,203
+outliers,E001,1,False,test-s203-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,203
+outliers,E002,1,False,test-s203-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,203
+outliers,E003,2,False,test-s203-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,203
+outliers,E004,4,False,test-s203-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,203
+outliers,E005,4,False,test-s203-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,203
+outliers,E006,2,True,test-s203-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,203
+outliers,E007,2,False,test-s203-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,203
+outliers,E009,1,False,test-s203-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,203
+outliers,E011,4,False,test-s203-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,203
+outliers,E012,2,False,test-s203-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,203
+outliers,E013,2,False,test-s203-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,203
+outliers,E014,1,False,test-s203-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,203
+outliers,E015,3,False,test-s203-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,203
+outliers,E017,1,False,test-s203-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,203
+outliers,E018,1,False,test-s203-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,203
+outliers,E019,3,False,test-s203-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,203
+outliers,E021,5,False,test-s203-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,203
+outliers,E022,1,True,test-s203-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,203
+outliers,E023,3,False,test-s203-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,203
+outliers,E024,3,False,test-s203-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,203
+outliers,E025,1,False,test-s203-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,203
+outliers,E026,2,False,test-s203-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,203
+outliers,E027,1,False,test-s203-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,203
+outliers,E028,1,False,test-s203-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,203
+outliers,E029,1,False,test-s203-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,203
+timestamps,E006,8,True,test-s203-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,203
+timestamps,E008,18,True,test-s203-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,203
+timestamps,E022,13,True,test-s203-claude-opus-5-5-cc-S1_informed-with_paradata,language model,claude-opus-5-5-cc,S1_informed,with_paradata,203
+duration,E002,1,False,test-s203-claude-opus-5-5-cc-S2_careful-content_only,language model,claude-opus-5-5-cc,S2_careful,content_only,203
+duration,E003,1,False,test-s203-claude-opus-5-5-cc-S2_careful-content_only,language model,claude-opus-5-5-cc,S2_careful,content_only,203
+duration,E004,1,False,test-s203-claude-opus-5-5-cc-S2_careful-content_only,language model,claude-opus-5-5-cc,S2_careful,content_only,203
+duration,E009,1,False,test-s203-claude-opus-5-5-cc-S2_careful-content_only,language model,claude-opus-5-5-cc,S2_careful,content_only,203
+duration,E012,1,False,test-s203-claude-opus-5-5-cc-S2_careful-content_only,language model,claude-opus-5-5-cc,S2_careful,content_only,203
+duration,E013,3,False,test-s203-claude-opus-5-5-cc-S2_careful-content_only,language model,claude-opus-5-5-cc,S2_careful,content_only,203
+duration,E017,1,False,test-s203-claude-opus-5-5-cc-S2_careful-content_only,language model,claude-opus-5-5-cc,S2_careful,content_only,203
+duration,E020,1,False,test-s203-claude-opus-5-5-cc-S2_careful-content_only,language model,claude-opus-5-5-cc,S2_careful,content_only,203
+duration,E023,2,False,test-s203-claude-opus-5-5-cc-S2_careful-content_only,language model,claude-opus-5-5-cc,S2_careful,content_only,203
+duration,E029,1,False,test-s203-claude-opus-5-5-cc-S2_careful-content_only,language model,claude-opus-5-5-cc,S2_careful,content_only,203
+heaping,E006,1,True,test-s203-claude-opus-5-5-cc-S2_careful-content_only,language model,claude-opus-5-5-cc,S2_careful,content_only,203
+heaping,E008,1,True,test-s203-claude-opus-5-5-cc-S2_careful-content_only,language model,claude-opus-5-5-cc,S2_careful,content_only,203
+outliers,E001,1,False,test-s203-claude-opus-5-5-cc-S2_careful-content_only,language model,claude-opus-5-5-cc,S2_careful,content_only,203
+outliers,E002,1,False,test-s203-claude-opus-5-5-cc-S2_careful-content_only,language model,claude-opus-5-5-cc,S2_careful,content_only,203
+outliers,E003,2,False,test-s203-claude-opus-5-5-cc-S2_careful-content_only,language model,claude-opus-5-5-cc,S2_careful,content_only,203
+outliers,E004,4,False,test-s203-claude-opus-5-5-cc-S2_careful-content_only,language model,claude-opus-5-5-cc,S2_careful,content_only,203
+outliers,E005,4,False,test-s203-claude-opus-5-5-cc-S2_careful-content_only,language model,claude-opus-5-5-cc,S2_careful,content_only,203
+outliers,E006,2,True,test-s203-claude-opus-5-5-cc-S2_careful-content_only,language model,claude-opus-5-5-cc,S2_careful,content_only,203
+outliers,E007,2,False,test-s203-claude-opus-5-5-cc-S2_careful-content_only,language model,claude-opus-5-5-cc,S2_careful,content_only,203
+outliers,E009,1,False,test-s203-claude-opus-5-5-cc-S2_careful-content_only,language model,claude-opus-5-5-cc,S2_careful,content_only,203
+outliers,E011,4,False,test-s203-claude-opus-5-5-cc-S2_careful-content_only,language model,claude-opus-5-5-cc,S2_careful,content_only,203
+outliers,E012,2,False,test-s203-claude-opus-5-5-cc-S2_careful-content_only,language model,claude-opus-5-5-cc,S2_careful,content_only,203
+outliers,E013,2,False,test-s203-claude-opus-5-5-cc-S2_careful-content_only,language model,claude-opus-5-5-cc,S2_careful,content_only,203
+outliers,E014,1,False,test-s203-claude-opus-5-5-cc-S2_careful-content_only,language model,claude-opus-5-5-cc,S2_careful,content_only,203
+outliers,E015,3,False,test-s203-claude-opus-5-5-cc-S2_careful-content_only,language model,claude-opus-5-5-cc,S2_careful,content_only,203
+outliers,E017,1,False,test-s203-claude-opus-5-5-cc-S2_careful-content_only,language model,claude-opus-5-5-cc,S2_careful,content_only,203
+outliers,E018,1,False,test-s203-claude-opus-5-5-cc-S2_careful-content_only,language model,claude-opus-5-5-cc,S2_careful,content_only,203
+outliers,E019,3,False,test-s203-claude-opus-5-5-cc-S2_careful-content_only,language model,claude-opus-5-5-cc,S2_careful,content_only,203
+outliers,E021,5,False,test-s203-claude-opus-5-5-cc-S2_careful-content_only,language model,claude-opus-5-5-cc,S2_careful,content_only,203
+outliers,E022,2,False,test-s203-claude-opus-5-5-cc-S2_careful-content_only,language model,claude-opus-5-5-cc,S2_careful,content_only,203
+outliers,E023,3,False,test-s203-claude-opus-5-5-cc-S2_careful-content_only,language model,claude-opus-5-5-cc,S2_careful,content_only,203
+outliers,E024,3,False,test-s203-claude-opus-5-5-cc-S2_careful-content_only,language model,claude-opus-5-5-cc,S2_careful,content_only,203
+outliers,E025,1,False,test-s203-claude-opus-5-5-cc-S2_careful-content_only,language model,claude-opus-5-5-cc,S2_careful,content_only,203
+outliers,E026,2,False,test-s203-claude-opus-5-5-cc-S2_careful-content_only,language model,claude-opus-5-5-cc,S2_careful,content_only,203
+outliers,E027,1,False,test-s203-claude-opus-5-5-cc-S2_careful-content_only,language model,claude-opus-5-5-cc,S2_careful,content_only,203
+outliers,E028,1,False,test-s203-claude-opus-5-5-cc-S2_careful-content_only,language model,claude-opus-5-5-cc,S2_careful,content_only,203
+outliers,E029,1,False,test-s203-claude-opus-5-5-cc-S2_careful-content_only,language model,claude-opus-5-5-cc,S2_careful,content_only,203
+duration,E002,1,False,test-s203-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,203
+duration,E003,1,False,test-s203-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,203
+duration,E004,1,False,test-s203-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,203
+duration,E006,15,True,test-s203-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,203
+duration,E008,21,True,test-s203-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,203
+duration,E009,1,False,test-s203-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,203
+duration,E012,1,False,test-s203-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,203
+duration,E013,3,False,test-s203-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,203
+duration,E017,1,False,test-s203-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,203
+duration,E020,1,False,test-s203-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,203
+duration,E023,2,False,test-s203-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,203
+duration,E029,1,False,test-s203-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,203
+enumerator_risk,E006,1,True,test-s203-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,203
+enumerator_risk,E008,1,True,test-s203-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,203
+gps,E006,13,True,test-s203-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,203
+gps,E008,21,True,test-s203-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,203
+heaping,E006,1,True,test-s203-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,203
+heaping,E008,1,True,test-s203-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,203
+outliers,E001,1,False,test-s203-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,203
+outliers,E002,1,False,test-s203-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,203
+outliers,E003,2,False,test-s203-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,203
+outliers,E004,4,False,test-s203-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,203
+outliers,E005,4,False,test-s203-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,203
+outliers,E006,2,True,test-s203-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,203
+outliers,E007,2,False,test-s203-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,203
+outliers,E009,1,False,test-s203-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,203
+outliers,E011,4,False,test-s203-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,203
+outliers,E012,2,False,test-s203-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,203
+outliers,E013,2,False,test-s203-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,203
+outliers,E014,1,False,test-s203-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,203
+outliers,E015,3,False,test-s203-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,203
+outliers,E017,1,False,test-s203-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,203
+outliers,E018,1,False,test-s203-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,203
+outliers,E019,3,False,test-s203-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,203
+outliers,E021,5,False,test-s203-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,203
+outliers,E022,2,False,test-s203-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,203
+outliers,E023,3,False,test-s203-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,203
+outliers,E024,3,False,test-s203-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,203
+outliers,E025,1,False,test-s203-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,203
+outliers,E026,2,False,test-s203-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,203
+outliers,E027,1,False,test-s203-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,203
+outliers,E028,1,False,test-s203-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,203
+outliers,E029,1,False,test-s203-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,203
+timestamps,E006,11,True,test-s203-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,203
+timestamps,E008,15,True,test-s203-claude-opus-5-5-cc-S2_careful-with_paradata,language model,claude-opus-5-5-cc,S2_careful,with_paradata,203

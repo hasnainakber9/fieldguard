@@ -1,0 +1,9 @@
+fabricator,paradata,surveys,flagged,recall,recall_95ci,honest_flagged,auc_risk_mean,auc_risk_min
+Rule-based (FieldGuard generator),content_only,3,5/9,0.5555555555555556,0.27-0.81,0/81,0.9958847736625515,0.9876543209876544
+Rule-based (FieldGuard generator),with_paradata,3,9/9,1.0,0.70-1.00,0/81,1.0,1.0
+claude-opus-5-5-cc / S0_naive,content_only,3,0/9,0.0,0.00-0.30,0/81,0.8580246913580246,0.5987654320987654
+claude-opus-5-5-cc / S0_naive,with_paradata,3,9/9,1.0,0.70-1.00,0/81,1.0,1.0
+claude-opus-5-5-cc / S1_informed,content_only,3,0/9,0.0,0.00-0.30,0/81,0.8909465020576132,0.845679012345679
+claude-opus-5-5-cc / S1_informed,with_paradata,3,9/9,1.0,0.70-1.00,0/81,1.0,1.0
+claude-opus-5-5-cc / S2_careful,content_only,3,0/7,0.0,0.00-0.35,0/83,1.0,1.0
+claude-opus-5-5-cc / S2_careful,with_paradata,3,7/7,1.0,0.65-1.00,0/83,1.0,1.0

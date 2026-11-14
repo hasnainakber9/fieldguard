@@ -1,0 +1,25 @@
+seed,fabricator,model,strategy,paradata,n_enumerators,n_fabricators,n_flagged,tp,fp,fn,precision,recall,f1,roc_auc_risk_score,roc_auc_rule_score,roc_auc_anomaly_score,records_returned,records_requested,refused
+201,rule-based (FieldGuard generator),-,-,content_only,30,3,2,2,0,1,1.0,0.6666666666666666,0.8,0.9876543209876544,1.0,0.9876543209876543,,,
+201,rule-based (FieldGuard generator),-,-,with_paradata,30,3,3,3,0,0,1.0,1.0,1.0,1.0,1.0,1.0,,,
+201,language model,claude-opus-5-5-cc,S0_naive,content_only,30,3,0,0,0,3,,0.0,0.0,0.9753086419753086,0.9753086419753086,0.9506172839506173,58.0,58.0,0.0
+201,language model,claude-opus-5-5-cc,S0_naive,with_paradata,30,3,3,3,0,0,1.0,1.0,1.0,1.0,1.0,1.0,58.0,58.0,0.0
+201,language model,claude-opus-5-5-cc,S1_informed,content_only,30,3,0,0,0,3,,0.0,0.0,0.845679012345679,0.7901234567901234,0.8086419753086419,58.0,58.0,0.0
+201,language model,claude-opus-5-5-cc,S1_informed,with_paradata,30,3,3,3,0,0,1.0,1.0,1.0,1.0,1.0,1.0,58.0,58.0,0.0
+201,language model,claude-opus-5-5-cc,S2_careful,content_only,30,2,0,0,0,2,,0.0,0.0,1.0,1.0,0.7321428571428571,34.0,58.0,1.0
+201,language model,claude-opus-5-5-cc,S2_careful,with_paradata,30,2,2,2,0,0,1.0,1.0,1.0,1.0,1.0,1.0,34.0,58.0,1.0
+202,rule-based (FieldGuard generator),-,-,content_only,30,3,1,1,0,2,1.0,0.3333333333333333,0.5,1.0,1.0,0.962962962962963,,,
+202,rule-based (FieldGuard generator),-,-,with_paradata,30,3,3,3,0,0,1.0,1.0,1.0,1.0,1.0,1.0,,,
+202,language model,claude-opus-5-5-cc,S0_naive,content_only,30,3,0,0,0,3,,0.0,0.0,1.0,1.0,0.7839506172839505,54.0,54.0,0.0
+202,language model,claude-opus-5-5-cc,S0_naive,with_paradata,30,3,3,3,0,0,1.0,1.0,1.0,1.0,1.0,1.0,54.0,54.0,0.0
+202,language model,claude-opus-5-5-cc,S1_informed,content_only,30,3,0,0,0,3,,0.0,0.0,0.8765432098765432,0.9135802469135803,0.8086419753086419,54.0,54.0,0.0
+202,language model,claude-opus-5-5-cc,S1_informed,with_paradata,30,3,3,3,0,0,1.0,1.0,1.0,1.0,1.0,1.0,54.0,54.0,0.0
+202,language model,claude-opus-5-5-cc,S2_careful,content_only,30,3,0,0,0,3,,0.0,0.0,1.0,1.0,0.9814814814814815,54.0,54.0,0.0
+202,language model,claude-opus-5-5-cc,S2_careful,with_paradata,30,3,3,3,0,0,1.0,1.0,1.0,1.0,1.0,1.0,54.0,54.0,0.0
+203,rule-based (FieldGuard generator),-,-,content_only,30,3,2,2,0,1,1.0,0.6666666666666666,0.8,1.0,1.0,1.0,,,
+203,rule-based (FieldGuard generator),-,-,with_paradata,30,3,3,3,0,0,1.0,1.0,1.0,1.0,1.0,1.0,,,
+203,language model,claude-opus-5-5-cc,S0_naive,content_only,30,3,0,0,0,3,,0.0,0.0,0.5987654320987654,0.5740740740740741,0.7901234567901233,54.0,54.0,0.0
+203,language model,claude-opus-5-5-cc,S0_naive,with_paradata,30,3,3,3,0,0,1.0,1.0,1.0,1.0,1.0,1.0,54.0,54.0,0.0
+203,language model,claude-opus-5-5-cc,S1_informed,content_only,30,3,0,0,0,3,,0.0,0.0,0.9506172839506173,0.9012345679012346,0.9506172839506173,54.0,54.0,0.0
+203,language model,claude-opus-5-5-cc,S1_informed,with_paradata,30,3,3,3,0,0,1.0,1.0,1.0,1.0,1.0,1.0,54.0,54.0,0.0
+203,language model,claude-opus-5-5-cc,S2_careful,content_only,30,2,0,0,0,2,,0.0,0.0,1.0,1.0,1.0,36.0,54.0,1.0
+203,language model,claude-opus-5-5-cc,S2_careful,with_paradata,30,2,2,2,0,0,1.0,1.0,1.0,1.0,1.0,1.0,36.0,54.0,1.0

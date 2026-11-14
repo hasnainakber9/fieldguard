@@ -1,0 +1,123 @@
+FieldGuard as released
+                        fabricator      paradata  surveys flagged  recall recall_95ci honest_flagged  auc_risk_mean  auc_risk_min
+Rule-based (FieldGuard generator)  content_only        3     5/9    0.56   0.27-0.81           0/81           1.00          0.99
+Rule-based (FieldGuard generator) with_paradata        3     9/9    1.00   0.70-1.00           0/81           1.00          1.00
+    claude-opus-5-5-cc / S0_naive  content_only        3     0/9    0.00   0.00-0.30           0/81           0.86          0.60
+    claude-opus-5-5-cc / S0_naive with_paradata        3     9/9    1.00   0.70-1.00           0/81           1.00          1.00
+ claude-opus-5-5-cc / S1_informed  content_only        3     0/9    0.00   0.00-0.30           0/81           0.89          0.85
+ claude-opus-5-5-cc / S1_informed with_paradata        3     9/9    1.00   0.70-1.00           0/81           1.00          1.00
+  claude-opus-5-5-cc / S2_careful  content_only        3     0/7    0.00   0.00-0.35           0/83           1.00          1.00
+  claude-opus-5-5-cc / S2_careful with_paradata        3     7/7    1.00   0.65-1.00           0/83           1.00          1.00 
+
+Checks firing (content_only)
+                     Rule-based (FieldGuard generator) | fabricators  Rule-based (FieldGuard generator) | honest  claude-opus-5-5-cc / S0_naive | fabricators  claude-opus-5-5-cc / S0_naive | honest  claude-opus-5-5-cc / S1_informed | fabricators  claude-opus-5-5-cc / S1_informed | honest  claude-opus-5-5-cc / S2_careful | fabricators  claude-opus-5-5-cc / S2_careful | honest
+benford                                                        0.67                                        0.01                                         0.00                                    0.00                                            0.00                                       0.00                                           0.00                                      0.00
+constraints                                                    0.11                                        0.00                                         0.00                                    0.00                                            0.00                                       0.00                                           0.00                                      0.00
+duration                                                       0.11                                        0.31                                         0.11                                    0.28                                            0.11                                       0.28                                           0.00                                      0.29
+enumerator_effects                                             0.22                                        0.00                                         0.00                                    0.00                                            0.00                                       0.00                                           0.00                                      0.00
+enumerator_risk                                                0.56                                        0.00                                         0.00                                    0.00                                            0.00                                       0.00                                           0.00                                      0.00
+heaping                                                        0.67                                        0.00                                         0.67                                    0.00                                            0.11                                       0.00                                           1.00                                      0.00
+nonresponse                                                    0.00                                        0.02                                         0.33                                    0.02                                            0.00                                       0.02                                           0.00                                      0.02
+outliers                                                       0.67                                        0.90                                         1.00                                    0.86                                            0.78                                       0.86                                           0.71                                      0.87
+straightlining                                                 0.56                                        0.00                                         0.00                                    0.00                                            0.00                                       0.00                                           0.00                                      0.00 
+
+Checks firing (with_paradata)
+                     Rule-based (FieldGuard generator) | fabricators  Rule-based (FieldGuard generator) | honest  claude-opus-5-5-cc / S0_naive | fabricators  claude-opus-5-5-cc / S0_naive | honest  claude-opus-5-5-cc / S1_informed | fabricators  claude-opus-5-5-cc / S1_informed | honest  claude-opus-5-5-cc / S2_careful | fabricators  claude-opus-5-5-cc / S2_careful | honest
+benford                                                        0.56                                        0.00                                         0.00                                    0.00                                            0.00                                       0.00                                           0.00                                      0.00
+constraints                                                    0.11                                        0.00                                         0.00                                    0.00                                            0.00                                       0.00                                           0.00                                      0.00
+duration                                                       0.33                                        0.37                                         1.00                                    0.28                                            1.00                                       0.28                                           1.00                                      0.29
+enumerator_effects                                             0.22                                        0.00                                         0.00                                    0.00                                            0.00                                       0.00                                           0.00                                      0.00
+enumerator_risk                                                1.00                                        0.00                                         1.00                                    0.00                                            1.00                                       0.00                                           1.00                                      0.00
+gps                                                            0.33                                        0.00                                         1.00                                    0.00                                            1.00                                       0.00                                           1.00                                      0.01
+heaping                                                        0.22                                        0.00                                         0.67                                    0.00                                            0.11                                       0.00                                           1.00                                      0.00
+near_duplicates                                                0.44                                        0.00                                         0.00                                    0.00                                            0.00                                       0.00                                           0.00                                      0.00
+nonresponse                                                    0.00                                        0.04                                         0.33                                    0.02                                            0.00                                       0.02                                           0.00                                      0.02
+outliers                                                       0.78                                        0.89                                         1.00                                    0.86                                            0.78                                       0.86                                           0.71                                      0.87
+straightlining                                                 0.44                                        0.00                                         0.00                                    0.00                                            0.00                                       0.00                                           0.00                                      0.00
+timestamps                                                     0.56                                        0.00                                         1.00                                    0.00                                            1.00                                       0.00                                           1.00                                      0.00 
+
+Candidate signals at |z| >= 3.5
+                        fabricator      paradata        signal  auc_abs_z fabricators_flagged honest_flagged
+Rule-based (FieldGuard generator)  content_only   round_share       0.92                 1/9           1/81
+Rule-based (FieldGuard generator)  content_only      wb_alpha       0.95                 8/9           0/81
+Rule-based (FieldGuard generator)  content_only     svc_alpha       0.85                 2/9           1/81
+Rule-based (FieldGuard generator)  content_only       grid_sd       0.94                 7/9           0/81
+Rule-based (FieldGuard generator)  content_only food_ratio_sd       0.68                 1/9           0/81
+Rule-based (FieldGuard generator)  content_only    typicality       0.84                 3/9           1/81
+Rule-based (FieldGuard generator)  content_only        spread       0.98                 7/9           0/81
+Rule-based (FieldGuard generator) with_paradata   round_share       0.85                 3/9           0/81
+Rule-based (FieldGuard generator) with_paradata      wb_alpha       0.82                 4/9           0/81
+Rule-based (FieldGuard generator) with_paradata     svc_alpha       0.87                 1/9           2/81
+Rule-based (FieldGuard generator) with_paradata       grid_sd       0.93                 7/9           1/81
+Rule-based (FieldGuard generator) with_paradata food_ratio_sd       0.66                 2/9           2/81
+Rule-based (FieldGuard generator) with_paradata    typicality       0.93                 3/9           0/81
+Rule-based (FieldGuard generator) with_paradata        spread       1.00                 7/9           0/81
+    claude-opus-5-5-cc / S0_naive  content_only   round_share       0.98                 1/9           0/81
+    claude-opus-5-5-cc / S0_naive  content_only      wb_alpha       0.39                 0/9           2/81
+    claude-opus-5-5-cc / S0_naive  content_only     svc_alpha       0.58                 0/9           4/81
+    claude-opus-5-5-cc / S0_naive  content_only       grid_sd       0.98                 4/9           0/81
+    claude-opus-5-5-cc / S0_naive  content_only food_ratio_sd       0.63                 0/9           0/81
+    claude-opus-5-5-cc / S0_naive  content_only    typicality       0.99                 5/9           0/81
+    claude-opus-5-5-cc / S0_naive  content_only        spread       1.00                 9/9           1/81
+    claude-opus-5-5-cc / S0_naive with_paradata   round_share       0.98                 1/9           0/81
+    claude-opus-5-5-cc / S0_naive with_paradata      wb_alpha       0.39                 0/9           2/81
+    claude-opus-5-5-cc / S0_naive with_paradata     svc_alpha       0.58                 0/9           4/81
+    claude-opus-5-5-cc / S0_naive with_paradata       grid_sd       0.98                 4/9           0/81
+    claude-opus-5-5-cc / S0_naive with_paradata food_ratio_sd       0.63                 0/9           0/81
+    claude-opus-5-5-cc / S0_naive with_paradata    typicality       0.99                 5/9           0/81
+    claude-opus-5-5-cc / S0_naive with_paradata        spread       1.00                 9/9           1/81
+ claude-opus-5-5-cc / S1_informed  content_only   round_share       0.97                 0/9           0/81
+ claude-opus-5-5-cc / S1_informed  content_only      wb_alpha       0.67                 0/9           1/81
+ claude-opus-5-5-cc / S1_informed  content_only     svc_alpha       0.65                 3/9           4/81
+ claude-opus-5-5-cc / S1_informed  content_only       grid_sd       1.00                 9/9           0/81
+ claude-opus-5-5-cc / S1_informed  content_only food_ratio_sd       0.60                 0/9           0/81
+ claude-opus-5-5-cc / S1_informed  content_only    typicality       1.00                 8/9           0/81
+ claude-opus-5-5-cc / S1_informed  content_only        spread       1.00                 9/9           2/81
+ claude-opus-5-5-cc / S1_informed with_paradata   round_share       0.97                 0/9           0/81
+ claude-opus-5-5-cc / S1_informed with_paradata      wb_alpha       0.67                 0/9           1/81
+ claude-opus-5-5-cc / S1_informed with_paradata     svc_alpha       0.65                 3/9           4/81
+ claude-opus-5-5-cc / S1_informed with_paradata       grid_sd       1.00                 9/9           0/81
+ claude-opus-5-5-cc / S1_informed with_paradata food_ratio_sd       0.60                 0/9           0/81
+ claude-opus-5-5-cc / S1_informed with_paradata    typicality       1.00                 8/9           0/81
+ claude-opus-5-5-cc / S1_informed with_paradata        spread       1.00                 9/9           2/81
+  claude-opus-5-5-cc / S2_careful  content_only   round_share       1.00                 2/7           0/83
+  claude-opus-5-5-cc / S2_careful  content_only      wb_alpha       0.39                 0/7           2/83
+  claude-opus-5-5-cc / S2_careful  content_only     svc_alpha       0.59                 2/7           4/83
+  claude-opus-5-5-cc / S2_careful  content_only       grid_sd       1.00                 7/7           0/83
+  claude-opus-5-5-cc / S2_careful  content_only food_ratio_sd       0.55                 0/7           0/83
+  claude-opus-5-5-cc / S2_careful  content_only    typicality       1.00                 6/7           0/83
+  claude-opus-5-5-cc / S2_careful  content_only        spread       1.00                 7/7           2/83
+  claude-opus-5-5-cc / S2_careful with_paradata   round_share       1.00                 2/7           0/83
+  claude-opus-5-5-cc / S2_careful with_paradata      wb_alpha       0.39                 0/7           2/83
+  claude-opus-5-5-cc / S2_careful with_paradata     svc_alpha       0.59                 2/7           4/83
+  claude-opus-5-5-cc / S2_careful with_paradata       grid_sd       1.00                 7/7           0/83
+  claude-opus-5-5-cc / S2_careful with_paradata food_ratio_sd       0.55                 0/7           0/83
+  claude-opus-5-5-cc / S2_careful with_paradata    typicality       1.00                 6/7           0/83
+  claude-opus-5-5-cc / S2_careful with_paradata        spread       1.00                 7/7           2/83 
+
+Frozen rule
+                        fabricator      paradata        rule fabricators_flagged  recall recall_95ci honest_flagged
+Rule-based (FieldGuard generator)  content_only  FieldGuard                 5/9    0.56   0.27-0.81           0/81
+Rule-based (FieldGuard generator)  content_only new signals                 7/9    0.78   0.45-0.94           1/81
+Rule-based (FieldGuard generator)  content_only      either                 7/9    0.78   0.45-0.94           1/81
+Rule-based (FieldGuard generator) with_paradata  FieldGuard                 9/9    1.00   0.70-1.00           0/81
+Rule-based (FieldGuard generator) with_paradata new signals                 9/9    1.00   0.70-1.00           1/81
+Rule-based (FieldGuard generator) with_paradata      either                 9/9    1.00   0.70-1.00           1/81
+    claude-opus-5-5-cc / S0_naive  content_only  FieldGuard                 0/9    0.00   0.00-0.30           0/81
+    claude-opus-5-5-cc / S0_naive  content_only new signals                 9/9    1.00   0.70-1.00           1/81
+    claude-opus-5-5-cc / S0_naive  content_only      either                 9/9    1.00   0.70-1.00           1/81
+    claude-opus-5-5-cc / S0_naive with_paradata  FieldGuard                 9/9    1.00   0.70-1.00           0/81
+    claude-opus-5-5-cc / S0_naive with_paradata new signals                 9/9    1.00   0.70-1.00           1/81
+    claude-opus-5-5-cc / S0_naive with_paradata      either                 9/9    1.00   0.70-1.00           1/81
+ claude-opus-5-5-cc / S1_informed  content_only  FieldGuard                 0/9    0.00   0.00-0.30           0/81
+ claude-opus-5-5-cc / S1_informed  content_only new signals                 9/9    1.00   0.70-1.00           2/81
+ claude-opus-5-5-cc / S1_informed  content_only      either                 9/9    1.00   0.70-1.00           2/81
+ claude-opus-5-5-cc / S1_informed with_paradata  FieldGuard                 9/9    1.00   0.70-1.00           0/81
+ claude-opus-5-5-cc / S1_informed with_paradata new signals                 9/9    1.00   0.70-1.00           2/81
+ claude-opus-5-5-cc / S1_informed with_paradata      either                 9/9    1.00   0.70-1.00           2/81
+  claude-opus-5-5-cc / S2_careful  content_only  FieldGuard                 0/7    0.00   0.00-0.35           0/83
+  claude-opus-5-5-cc / S2_careful  content_only new signals                 7/7    1.00   0.65-1.00           2/83
+  claude-opus-5-5-cc / S2_careful  content_only      either                 7/7    1.00   0.65-1.00           2/83
+  claude-opus-5-5-cc / S2_careful with_paradata  FieldGuard                 7/7    1.00   0.65-1.00           0/83
+  claude-opus-5-5-cc / S2_careful with_paradata new signals                 7/7    1.00   0.65-1.00           2/83
+  claude-opus-5-5-cc / S2_careful with_paradata      either                 7/7    1.00   0.65-1.00           2/83

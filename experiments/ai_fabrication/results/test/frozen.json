@@ -1,0 +1,11 @@
+{
+ "signals": [
+  "grid_sd",
+  "spread",
+  "typicality"
+ ],
+ "threshold": 3.5,
+ "min_n": 8,
+ "chosen_on": "dev seeds 101-102, 15 Nov 2026, before any held-out result was computed",
+ "dev_result": "content-only: AI fabricators 13/18, rule-based 5/6, honest 0/216 enumerator-runs"
+}
