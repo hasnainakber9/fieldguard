@@ -1,0 +1,25 @@
+fabricator,paradata,rule,fabricators_flagged,recall,recall_95ci,honest_flagged
+Rule-based (FieldGuard generator),content_only,FieldGuard,4/6,0.6666666666666666,0.30-0.90,0/54
+Rule-based (FieldGuard generator),content_only,new signals,5/6,0.8333333333333334,0.44-0.97,0/54
+Rule-based (FieldGuard generator),content_only,either,5/6,0.8333333333333334,0.44-0.97,0/54
+Rule-based (FieldGuard generator),with_paradata,FieldGuard,6/6,1.0,0.61-1.00,0/54
+Rule-based (FieldGuard generator),with_paradata,new signals,3/6,0.5,0.19-0.81,1/54
+Rule-based (FieldGuard generator),with_paradata,either,6/6,1.0,0.61-1.00,1/54
+claude-opus-5-5-cc / S0_naive,content_only,FieldGuard,0/6,0.0,0.00-0.39,0/54
+claude-opus-5-5-cc / S0_naive,content_only,new signals,4/6,0.6666666666666666,0.30-0.90,0/54
+claude-opus-5-5-cc / S0_naive,content_only,either,4/6,0.6666666666666666,0.30-0.90,0/54
+claude-opus-5-5-cc / S0_naive,with_paradata,FieldGuard,6/6,1.0,0.61-1.00,0/54
+claude-opus-5-5-cc / S0_naive,with_paradata,new signals,4/6,0.6666666666666666,0.30-0.90,0/54
+claude-opus-5-5-cc / S0_naive,with_paradata,either,6/6,1.0,0.61-1.00,0/54
+claude-opus-5-5-cc / S1_informed,content_only,FieldGuard,0/6,0.0,0.00-0.39,0/54
+claude-opus-5-5-cc / S1_informed,content_only,new signals,4/6,0.6666666666666666,0.30-0.90,0/54
+claude-opus-5-5-cc / S1_informed,content_only,either,4/6,0.6666666666666666,0.30-0.90,0/54
+claude-opus-5-5-cc / S1_informed,with_paradata,FieldGuard,6/6,1.0,0.61-1.00,0/54
+claude-opus-5-5-cc / S1_informed,with_paradata,new signals,4/6,0.6666666666666666,0.30-0.90,0/54
+claude-opus-5-5-cc / S1_informed,with_paradata,either,6/6,1.0,0.61-1.00,0/54
+claude-opus-5-5-cc / S2_careful,content_only,FieldGuard,0/6,0.0,0.00-0.39,0/54
+claude-opus-5-5-cc / S2_careful,content_only,new signals,5/6,0.8333333333333334,0.44-0.97,0/54
+claude-opus-5-5-cc / S2_careful,content_only,either,5/6,0.8333333333333334,0.44-0.97,0/54
+claude-opus-5-5-cc / S2_careful,with_paradata,FieldGuard,6/6,1.0,0.61-1.00,0/54
+claude-opus-5-5-cc / S2_careful,with_paradata,new signals,5/6,0.8333333333333334,0.44-0.97,0/54
+claude-opus-5-5-cc / S2_careful,with_paradata,either,6/6,1.0,0.61-1.00,0/54
