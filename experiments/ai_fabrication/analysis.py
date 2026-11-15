@@ -6,7 +6,7 @@
 Counts are small (3 fabricators per survey), so results are reported as counts with Wilson 95% intervals, and the
 ROC-AUC per survey is averaged over surveys.
 """
-
+ 
 from __future__ import annotations
 
 import argparse
