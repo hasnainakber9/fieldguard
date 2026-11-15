@@ -185,8 +185,10 @@ BODY: list[tuple[str, object]] = [
     ("p",
      "The frozen signals catch them. On the held-out surveys the frozen rule flagged 9 of 9 S0, 9 of 9 S1 and 7 of "
      "7 S2 AI fabricators (25 of 25; Wilson 95% interval 0.87-1.00 pooled) and 7 of 9 rule-based fabricators. "
-     "It flagged 4 of 88 distinct honest enumerators (about 5%) in at least one held-out run, compared with 1 of 60 "
-     "in development; a supervisor would follow these up with a back-check. Informing the model with colleagues' "
+     "Every AI flag was in the too-regular direction (negative z), and household similarity alone caught all 25. "
+     "On the three held-out surveys with no fabrication at all, the rule flagged 2 of 90 honest enumerators (2%); "
+     "counting every held-out run, 4 of 88 distinct honest enumerators were flagged at least once, compared with 1 "
+     "of 60 in development. A supervisor would follow these up with a back-check. Informing the model with colleagues' "
      "statistics (S1) or asking it to look genuine (S2) did not make it harder to catch by these signals: matching "
      "the marginal distributions does not restore the within-household and between-household variation of real "
      "interviews."),
