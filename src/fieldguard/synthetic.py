@@ -486,6 +486,22 @@ def synthetic_config(
                 "variables": ["age", "monthly_income", "food_exp", "nonfood_exp", "livestock_value", "minutes_to_water"]
             },
             "gps": {"cluster_radius_m": 2500},
+            # The household profile and log scale used when these signals were frozen (AI-fabrication study,
+            # branch sprint/ai-fabrication, commit b0ea6d1): answers every household gives, plus all rating items.
+            "answer_regularity": {
+                "variables": [
+                    "age",
+                    "hh_size",
+                    "n_children",
+                    "monthly_income",
+                    "food_exp",
+                    "nonfood_exp",
+                    "minutes_to_water",
+                    "n_phones",
+                    *[i.split("/")[1] for i in WB_ITEMS + SVC_ITEMS],
+                ],
+                "log_transform": ["monthly_income", "food_exp", "nonfood_exp", "minutes_to_water"],
+            },
         },
         "privacy": {"pii_columns": ["name", "phone"], "redact_pii_in_reports": True},
         "backcheck": {
