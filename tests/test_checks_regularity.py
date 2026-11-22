@@ -10,7 +10,7 @@ from fieldguard.checks.builtin.regularity import SIGNALS, _skip_dependent, peer_
 from fieldguard.checks.context import build_context
 from fieldguard.checks.registry import get_check
 from fieldguard.config import ConfigError, config_from_dict
-from fieldguard.pipeline import finalize_issues
+from fieldguard.pipeline import finalize_issues, run_checks
 from fieldguard.synthetic import SVC_ITEMS, WB_ITEMS, SyntheticSpec, generate_survey, synthetic_config
 
 RATINGS = WB_ITEMS + SVC_ITEMS
@@ -118,6 +118,21 @@ def test_too_varied_enumerator_is_information_and_not_scored():
     assert "Often honest" in grid["message"].iloc[0]
     assert (mine["severity"] == "info").all()
     assert excess(metrics)["E004"] < 1.0
+
+
+def test_too_regular_enumerator_is_flagged_in_the_scorecard_and_others_keep_their_scores():
+    df, spec = survey(22, n_enumerators=16, interviews=15)
+    df = make_too_regular(df, "E003")
+    on = run_checks(df, config(spec))
+    off = run_checks(df, config(spec, enabled=False))
+    card = on.scorecard.set_index("enumerator")
+    assert bool(card.loc["E003", "flagged"]) is True
+    assert "Too-regular answers vs peers (40)" in card.loc["E003", "top_reasons"]
+    scored = set(too_regular(on.issues[on.issues["check_id"] == "answer_regularity"])["enumerator"])
+    others = card.index.difference(sorted(scored))
+    before = off.scorecard.set_index("enumerator")["risk_score"]
+    assert np.allclose(card.loc[others, "risk_score"], before.loc[others])
+    assert on.check_status.set_index("check_id").loc["answer_regularity", "status"] == "ok"
 
 
 def test_small_n_enumerator_is_not_compared_unless_min_n_is_lowered():
