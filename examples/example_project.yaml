@@ -85,6 +85,10 @@ checks:                                  # per-check parameters; omit a check to
   near_duplicates:
     threshold: 0.95
     min_compared: 10
+  answer_regularity:                     # interviews far more regular (or varied) than other enumerators'
+    threshold: 3.5                       # |robust z| against peers; a flag is a lead for a back-check, not proof
+    min_n: 8                             # enumerators with fewer interviews are not compared
+    # variables: [age, hh_size, ...]     # household profile; default: numeric answers everyone gives + grid items
 
 scoring:
   flag_threshold: 30                     # risk score (0-100) at which an enumerator is flagged

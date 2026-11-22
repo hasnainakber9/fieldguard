@@ -158,7 +158,7 @@ Every section is optional except that `data.path` (or `--data`) must be given fo
 
 ## Check catalogue
 
-Fourteen checks are registered. Each produces rows in one tidy issues table with the columns `run_id`,
+Fifteen checks are registered. Each produces rows in one tidy issues table with the columns `run_id`,
 `check_id`, `severity`, `level`, `record_id`, `respondent_id`, `enumerator`, `survey_date`, `variable`, `value`,
 `metric`, `message`. Severities are `info`, `warning` and `critical`. Thresholds below are defaults; each is set
 under `checks.<id>` in the project file. The list can be printed with the registry (`fieldguard.checks.registry`).
@@ -179,12 +179,61 @@ under `checks.<id>` in the project file. The list can be printed with the regist
 | `heaping` | fabrication | Excess of values ending in 0 or 5, and round leading pairs (for example 2500), by enumerator against pooled data | `ratio_threshold` 1.5, `p_threshold` 0.01, `min_n` 20 | Shryock and Siegel (Whipple's index); Bredl et al. (2012) |
 | `benford` | fabrication | First-digit distribution by enumerator, judged with Nigrini's MAD bands (0.006 close, 0.012 acceptable, 0.015 marginal, above that nonconformity) and a chi-square test | `min_n` 50, `min_value` 10, `excess_threshold` 1.5 | Nigrini (2012); Judge and Schechter (2009); Schräpler (2011) |
 | `enumerator_effects` | enumerator | Intra-class correlation (ICC(1)) of key variables by enumerator, enumerators with atypical means, implausibly low variance, and categorical associations (Cramér's V) | `icc_threshold` 0.1, `p_threshold` 0.01, `mean_z_threshold` 4, `variance_ratio_threshold` 0.5, `min_n` 8 | West and Blom (2017); Schäfer et al. (2005); Bredl et al. (2012) |
+| `answer_regularity` | fabrication | Enumerators whose interviews are far more regular (warning) or more varied (info) than other enumerators': how much ratings vary within an interview (`grid_sd`), how alike their households are (`spread`) and how close they sit to the survey's typical household (`typicality`), each as a robust z against peers. See [Answer regularity](#answer-regularity). | `threshold` 3.5, `min_n` 8, `min_enumerators` 15, all three `signals` | FieldGuard AI-fabrication study (2026, synthetic data); Iglewicz and Hoaglin (1993) |
 
 The check status (ran, skipped, failed, issue count, seconds) is written to `check_status`. A failing check is
 recorded and does not stop the run unless `--strict` is given. A check whose columns are missing reports which
 columns it needed.
 
 Severity is a triage label. The rationale for each check is in its docstring in `src/fieldguard/checks/builtin/`.
+
+### Answer regularity
+
+Interviews that were never really conducted, whether invented by hand or written by a chatbot, tend to be *too
+regular*: ratings within an interview hardly vary, households resemble each other, and every household sits close
+to "typical". `answer_regularity` compares each enumerator with the other enumerators in the same survey on three
+signals computed from the answers alone (no paradata), so it still works when timestamps and GPS look normal:
+
+| Signal | What is measured | Message when too regular |
+|---|---|---|
+| `grid_sd` | Mean standard deviation of the rating items within an interview (numeric items of all `variables.grids`, pooled) | "Ratings within this enumerator's interviews vary much less than their peers'" |
+| `spread` | Median distance from each interview to the most similar other interview by the same enumerator | "This enumerator's households are much more alike than their peers' households" |
+| `typicality` | Mean distance of the enumerator's interviews from the survey's median household | "This enumerator's households are much closer to the survey's typical household than their peers'" |
+
+Distances are root-mean-square over a household profile. By default it is `variables.numeric` without the
+questions that skip logic or a conditional `required` makes depend on other answers, plus every grid item; set
+`checks.answer_regularity.variables` to choose the answers. Each answer is standardised against all interviews by
+median and MAD (after `log(1 + x)` for the amounts in `checks.outliers.log_transform`, or
+`checks.answer_regularity.log_transform`) and clipped at ±6. Each signal then becomes a robust z against the
+enumerators with at least `min_n` interviews, `(x - median) / (1.4826 x MAD)`. When `|z|` reaches `threshold`,
+the enumerator gets one issue per signal that names the direction in plain words, with their value, the peer
+median and z, and ends "A lead for a back-check, not proof of fabrication":
+
+* **too regular** (negative z) is a `warning` and counts towards the risk score (see [Enumerator scoring](#enumerator-scoring));
+* **too varied** (positive z) is `info` only. It found no fabricator in the study's development surveys or in fresh
+  generator surveys, and it is what honest enumerators with an unusual or mixed area, or few interviews, produce.
+
+Peers are compared only once `min_enumerators` (15) enumerators have `min_n` interviews; until then the check
+leaves a note. A signal is skipped, with a note, when its MAD is zero (at least half of the enumerators share one
+value).
+
+**Where the defaults come from.** The three signals, the threshold of 3.5 and the minimum of 8 interviews were
+fixed on development surveys of a synthetic study and then scored once on held-out surveys (branch
+`sprint/ai-fabrication`, `experiments/ai_fabrication/`, frozen in commit `b0ea6d1`; 30 enumerators per survey, 3
+of them fabricating). With honest-looking timestamps and GPS, FieldGuard v0.1.0 flagged 0 of 25 enumerators whose
+interviews a language model had written. These signals flagged all 25, every one as too regular, and 7 of 9 of
+FieldGuard's own rule-based fabricators, and flagged 2 of 90 honest enumerators on the held-out surveys without
+fabrication. This implementation reproduces the study's z-scores (largest difference 1.4e-13) on its development
+surveys. `min_enumerators` is not from the study, which always had 30 enumerators. On honest generator surveys
+(40 per team size), the share of honest enumerators flagged as too regular was 0.2% with 30 enumerators, 0.9%
+with 20, 1.2% with 15, 3.3% with 10 and 4.2% with 6.
+
+**Reading a flag.** Every result is a lead for a back-check, not proof of fabrication. Honest reasons for a
+too-regular result include a very uniform assignment area and a workload far from peers': `spread` falls as an
+enumerator's number of interviews grows. On honest generator surveys where everyone else had 25 interviews, an
+enumerator with 100 was flagged as too regular in 3 of 40 surveys and one with 10 in 2 of 40 (and reported as too
+varied in 9 of 40), against 0.2% of enumerators with a typical workload. All of the evidence above comes from
+simulated surveys.
 
 ## Enumerator scoring
 
@@ -194,6 +243,15 @@ Each enumerator gets a **rule score** (0-100) and an **anomaly score** (0-100), 
   weight. The points are summed and capped at 100, and the top three contributing indicators are reported as
   reasons. The ramps and weights are documented in `src/fieldguard/scoring/rules.py` and can be overridden under
   `scoring.rule_overrides`. They are judgement-based and have not been calibrated on real data.
+* **Answer regularity:** `regularity_excess` is the size of the most negative z from `answer_regularity` (the
+  too-regular side) divided by its `threshold`, or 0 when no z is negative. Its rule ("Too-regular answers vs
+  peers") is a step, not a ramp: 40 points from 1.0 up, none below. With the default `anomaly_weight` (0.25) and
+  `flag_threshold` (30), `40 x 0.75 = 30`, so an enumerator who reaches the threshold as too regular is flagged
+  whatever the other indicators say, and every other enumerator keeps exactly the score they would have without the
+  check. This is the rule the study evaluated (FieldGuard's flag or the frozen signals), restricted to the
+  too-regular side. If you change `anomaly_weight` or `flag_threshold`, adjust it under
+  `scoring.rule_overrides.regularity_excess`; `weight: 0` keeps the check's issues without scoring them. The
+  check's z-scores are not fed to the anomaly model.
 * **Anomaly score:** an Isolation Forest (or LOF, or none) on robust-standardised enumerator-level features,
   single job with a fixed seed. It needs at least `min_enumerators_for_anomaly` eligible enumerators; otherwise the
   anomaly score is blank and the risk score equals the rule score. Isolation Forest scores are mapped to 0-100 as
@@ -310,7 +368,7 @@ digit-heaped, short or GPS-clustered interviews, among other patterns), runs the
 against the answer key. It covers contamination rates of 5%, 10%, 20% and 30% of 30 enumerators, with three
 seeds each, and writes per-run and summary tables and a JSON file under the output folder.
 
-Results from the run recorded in this release (`D:/ComputationalLab/reports/fieldguard/benchmark/`; synthetic; 30
+Results of `fieldguard benchmark`, re-run on 22 November 2026 when `answer_regularity` was added (synthetic; 30
 enumerators and about 25 interviews each; 3 seeds per rate; mean over seeds, with the standard deviation in brackets
 where it is not zero):
 
@@ -318,11 +376,13 @@ where it is not zero):
 |---|---|---|---|---|---|---|---|
 | 5% | 2 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 |
 | 10% | 3 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 |
-| 20% | 6 | 1.00 | 0.83 (0.17) | 0.90 | 1.00 | 1.00 | 0.94 |
-| 30% | 9 | 1.00 | 0.82 (0.13) | 0.89 | 1.00 | 1.00 | 0.93 |
+| 20% | 6 | 1.00 | 0.94 (0.10) | 0.97 | 1.00 | 1.00 | 0.94 |
+| 30% | 9 | 1.00 | 0.93 (0.06) | 0.96 | 1.00 | 1.00 | 0.93 |
 
 Precision and recall are computed from the flagged enumerators against the answer key. Recall below 1.00 means
-some fabricators were not flagged. No honest enumerator was flagged in any run.
+some fabricators were not flagged. No honest enumerator was flagged in any run. Before `answer_regularity` (the
+v0.1.0 run in `D:/ComputationalLab/reports/fieldguard/benchmark/`), recall was 0.83 (0.17) at 20% and 0.81 (0.13)
+at 30%, with F1 0.90 and 0.89; every other figure was the same.
 
 These numbers reflect the generator's assumptions. Each fabricating enumerator applies 2 to 4 of the 10 modelled
 patterns to 60% to 100% of their interviews, so the signal is strong by design. Perfect separation is expected
@@ -349,6 +409,11 @@ What was exercised for v0.1.0 (October 2026), beyond the unit tests (all on synt
   unprivileged user `fieldguard` (UID/GID 10001, confirmed with `id` inside the container); outputs go to `/work`
   (see [Docker](#docker)). Rebuilt and re-run on 31 October 2026: `version` and `demo` ran as UID 10001 and wrote
   their files, owned by `fieldguard`, to a named volume at `/work`.
+* `answer_regularity` (22 November 2026): on the AI-fabrication study's development surveys (seeds 101-102, all 16
+  runs) it reproduces the study's z-scores for the three signals (largest difference 1.4e-13) and flags the same
+  enumerators; the scorecard flag equals FieldGuard's previous flag or the study's rule on the too-regular side in
+  every run, and no other enumerator's score changes. The test suite, re-run without a database, gave 238 passed
+  and 2 skipped (the live PostgreSQL tests).
 
 **Not verified**
 
@@ -370,6 +435,11 @@ What was exercised for v0.1.0 (October 2026), beyond the unit tests (all on synt
      a size your supervisors can follow up, and record the values you chose in the project file.
   4. Re-check after changes to the form, the team or the sample, since checks such as Benford, heaping and the
      enumerator-effect ICC depend on the questionnaire and the population.
+* **Answer regularity rests on simulated data.** Its defaults were fixed and tested on synthetic surveys with 30
+  enumerators of about 25 interviews each, and on one language model's fabrications. Real enumerators differ more
+  from each other (areas, workloads, respondent mix), which will raise false flags, and uneven workloads matter
+  most (see [Answer regularity](#answer-regularity)). A fabricator who knows the checks can ask for more varied
+  answers. Calibrate it with the steps above before acting on its flags.
 * **Synthetic results are optimistic.** See the benchmark section.
 * **Small samples.** Enumerator-level statistics (Benford, heaping, ICC, Isolation Forest) are unstable with few
   interviews or enumerators. Check `min_n` and `min_enumerators_for_anomaly` for your design.
