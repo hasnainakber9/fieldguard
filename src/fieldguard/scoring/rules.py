@@ -1,8 +1,15 @@
 """Transparent rule-based enumerator risk points.
 
 Each indicator earns ``weight x points_per_weight x s`` points, where ``s`` ramps linearly from 0 at ``lo``
-to 1 at ``hi`` (``lo > hi`` means lower values are riskier). The rule score is the sum, capped at 100.
-Indicators whose metric is unavailable (e.g. no GPS) simply contribute nothing.
+to 1 at ``hi`` (``lo > hi`` means lower values are riskier; ``lo == hi`` is a step). The rule score is the sum,
+capped at 100. Indicators whose metric is unavailable (e.g. no GPS) simply contribute nothing.
+
+``regularity_excess`` (from the answer_regularity check: the most negative z, i.e. the too-regular side, divided
+by the check's threshold) is a step worth 40 points: ``40 x (1 - anomaly_weight) = 30 = flag_threshold`` with the
+default scoring, so an enumerator who reaches the threshold on the too-regular side is flagged whatever the other
+indicators say, and one below it gets no points, leaving every other score unchanged. That is the decision rule
+evaluated in the AI-fabrication study (FieldGuard's flag or the frozen signals), restricted to the direction in
+which the study's fabricators were found; a graded ramp would be a new, unevaluated rule.
 """
 
 from __future__ import annotations
@@ -34,6 +41,7 @@ DEFAULT_RULES: list[ScoringRule] = [
     ScoringRule(metric="constraint_violation_rate", lo=0.02, hi=0.10, weight=0.5, label="Constraint violations"),
     ScoringRule(metric="skip_violation_rate", lo=0.02, hi=0.10, weight=0.5, label="Skip-logic violations"),
     ScoringRule(metric="outlier_rate", lo=0.05, hi=0.15, weight=0.5, label="Outliers"),
+    ScoringRule(metric="regularity_excess", lo=1.0, hi=1.0, weight=4.0, label="Too-regular answers vs peers"),
 ]
 
 

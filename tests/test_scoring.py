@@ -114,6 +114,38 @@ def test_scorecard_flags_enumerator_with_strong_rule_signal():
     assert "Prioritise for supervision" in risk["message"].iloc[0]
 
 
+def test_regularity_rule_is_a_step_at_the_checks_threshold():
+    rule = {r.metric: r for r in DEFAULT_RULES}["regularity_excess"]
+    assert rule.lo == rule.hi == 1.0
+    feats = pd.DataFrame({"regularity_excess": [0.99, 1.0, 3.0, np.nan]}, index=["E1", "E2", "E3", "E4"])
+    _, points = rule_scores(feats, ScoringConfig())
+    assert points[rule.label].tolist() == [0.0, 40.0, 40.0, 0.0]
+
+
+def test_regularity_points_alone_reach_the_flag_line_with_default_scoring():
+    cfg = ScoringConfig()
+    rule = {r.metric: r for r in DEFAULT_RULES}["regularity_excess"]
+    # worst case: anomaly score 0, so risk = rule points x (1 - anomaly_weight)
+    assert rule.weight * cfg.points_per_weight * (1 - cfg.anomaly_weight) >= cfg.flag_threshold
+
+
+def test_scorecard_flags_on_regularity_alone():
+    df = survey_frame(9, ("E1", "E2"))
+    cfg = make_cfg(scoring={"anomaly_method": "none"})
+    ctx = build_context(df, cfg, run_id="t")
+    metrics = pd.DataFrame(
+        [
+            {"check_id": "answer_regularity", "enumerator": "E1", "metric": "regularity_excess", "value": 1.2},
+            {"check_id": "answer_regularity", "enumerator": "E2", "metric": "regularity_excess", "value": 0.4},
+        ]
+    )
+    card, risk = build_scorecard(ctx, metrics, pd.DataFrame(columns=["severity", "enumerator", "level"]), cfg.scoring)
+    card = card.set_index("enumerator")
+    assert bool(card.loc["E1", "flagged"]) is True and bool(card.loc["E2", "flagged"]) is False
+    assert card.loc["E1", "top_reasons"] == "Too-regular answers vs peers (40)"
+    assert card.loc["E2", "risk_score"] == 0.0
+
+
 def test_feature_table_pivots_metrics():
     m = pd.DataFrame({"check_id": ["a", "a"], "enumerator": ["E1", "E1"], "metric": ["x", "y"], "value": [1.0, 2.0]})
     table = feature_table(m)

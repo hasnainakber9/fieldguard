@@ -52,6 +52,13 @@ it do not transfer to real surveys without testing on real data.
 Every synthetic row carries `_synthetic`. Every output file from synthetic data starts with `synthetic_` and
 carries the label in the summary, workbook and HTML report.
 
+The defaults of the `answer_regularity` check (its three signals, the threshold of 3.5 and the minimum of 8
+interviews) come from a synthetic-only study of model-written interviews, kept on the branch
+`sprint/ai-fabrication` (`experiments/ai_fabrication/`). Its honest interviews come from this generator and its
+fabricated ones were written by a language model for the generator's synthetic villages; no real survey data was
+used. `synthetic_config()` sets that study's household profile for the check, so the demo and the benchmark use
+the signals exactly as they were defined there.
+
 ## 3. Real survey data: search and status
 
 * Local folders were searched by file name: `D:/ComputationalLab/data/` contains geospatial and other project data
